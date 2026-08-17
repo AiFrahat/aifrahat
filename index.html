@@ -3,59 +3,947 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+
 <title>AiFrahat.com | الذكاء الصناعى ببساطة</title>
+
 <meta name="description" content="AiFrahat.com يساعدك تتعلم الذكاء الصناعى ببساطة، وتستخدم أدوات مجانية لإنجاز العمل والدراسة والصور والكتابة وتوفير الوقت والمال.">
 <meta name="keywords" content="AiFrahat, الذكاء الصناعى, أدوات الذكاء الصناعى, تعلم الذكاء الصناعى, AI بالعربي, إنتاجية, أدوات مجانية">
 <meta name="robots" content="index,follow,max-image-preview:large">
+
 <link rel="canonical" href="https://aifrahat.com/">
-<meta property="og:type" content="website"><meta property="og:title" content="AiFrahat.com | الذكاء الصناعى ببساطة"><meta property="og:description" content="تعلم الذكاء الصناعى واستخدمه في حياتك وشغلك ببساطة."><meta property="og:url" content="https://aifrahat.com/">
+
+<meta property="og:type" content="website">
+<meta property="og:title" content="AiFrahat.com | الذكاء الصناعى ببساطة">
+<meta property="og:description" content="تعلم الذكاء الصناعى واستخدمه في حياتك وشغلك ببساطة.">
+<meta property="og:url" content="https://aifrahat.com/">
+
+<!-- Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-Y8KX0PK9JQ"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-Y8KX0PK9JQ');
+</script>
+<!-- End Google Analytics -->
+
 <style>
 :root{--blue:#125bea;--blue2:#0b3eaf;--navy:#071a46;--yellow:#ffc52d;--bg:#f7f9fe;--card:#fff;--muted:#6d7890;--line:#e4e9f3;--green:#24a46b;--shadow:0 18px 50px rgba(25,57,112,.09);--radius:28px}
-*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;font-family:"Tajawal","Segoe UI",Tahoma,Arial,sans-serif;background:var(--bg);color:var(--navy);line-height:1.7}a{text-decoration:none;color:inherit}button,input{font:inherit}.container{width:min(1180px,calc(100% - 36px));margin:auto}.topbar{height:78px;background:#fff;border-bottom:1px solid var(--line);position:sticky;top:0;z-index:50}.nav{height:100%;display:flex;align-items:center;gap:28px}.logo{font-weight:950;font-size:29px;letter-spacing:-1.5px;color:#121d38;white-space:nowrap}.logo b{color:var(--blue)}.logo small{display:block;font-size:10px;font-weight:500;letter-spacing:0;color:#7c8495;margin-top:-8px}.navlinks{display:flex;gap:30px;margin:auto;font-weight:800}.navlinks a{padding:27px 0;border-bottom:3px solid transparent}.navlinks a:hover,.navlinks a.active{color:var(--blue);border-color:var(--blue)}.nav-actions{display:flex;align-items:center;gap:12px}.iconbtn{width:42px;height:42px;border:1px solid var(--line);background:#fff;border-radius:50%;display:grid;place-items:center;font-size:20px;cursor:pointer}.primary{background:var(--blue);color:#fff;border:0;border-radius:16px;padding:13px 22px;font-weight:900;box-shadow:0 10px 24px rgba(18,91,234,.22);cursor:pointer}.hamb{display:none}.hero{padding:56px 0 22px;background:radial-gradient(circle at 78% 25%,#eaf1ff 0,transparent 28%),linear-gradient(#fff,#f7f9fe)}.hero-grid{display:grid;grid-template-columns:1fr 1.05fr;gap:48px;align-items:center;direction:ltr}.hero-copy{direction:rtl}.eyebrow{display:inline-flex;align-items:center;gap:8px;background:#edf3ff;color:var(--blue);border-radius:999px;padding:8px 17px;font-weight:900}.hero h1{font-size:clamp(43px,5vw,72px);line-height:1.15;margin:18px 0 12px;letter-spacing:-2px}.hero h1 .blue{color:var(--blue)}.hero h1 .underline{position:relative;display:inline-block}.hero h1 .underline:after{content:"";position:absolute;height:7px;background:var(--yellow);left:2px;right:20px;bottom:-4px;border-radius:99px;transform:rotate(-2deg)}.lead{font-size:20px;color:#4e5c76;max-width:680px}.searchbox{display:flex;background:#fff;border:1px solid #dce3ef;border-radius:22px;padding:7px;box-shadow:0 12px 30px rgba(25,57,112,.06);margin-top:22px}.searchbox input{border:0;outline:0;flex:1;padding:15px 17px;background:transparent;color:var(--navy);font-size:17px}.searchbox button{border:0;background:var(--blue);color:#fff;border-radius:17px;padding:0 23px;font-weight:900;cursor:pointer}.chips{display:flex;gap:9px;flex-wrap:wrap;margin:13px 0}.chip{border:1px solid var(--line);background:#fff;border-radius:999px;padding:7px 13px;color:#58647a;cursor:pointer}.trust{display:flex;gap:22px;flex-wrap:wrap;color:#4f5c73;font-weight:800;margin-top:18px}.trust span:before{content:"✓";color:var(--green);font-weight:950;margin-left:6px}.hero-art{direction:rtl;position:relative;min-height:510px;display:flex;align-items:flex-end;justify-content:center}.yellow-disc{position:absolute;width:410px;height:410px;border-radius:50%;background:linear-gradient(145deg,#ffd43e,#f7b91d);top:55px;left:50%;transform:translateX(-50%);box-shadow:0 18px 50px rgba(255,197,45,.16)}.portrait{position:relative;z-index:2;width:min(640px,100%);height:570px;object-fit:contain;object-position:center bottom;filter:drop-shadow(0 22px 25px rgba(7,26,70,.13))}.float{position:absolute;z-index:3;width:66px;height:66px;background:#fff;border:1px solid var(--line);border-radius:19px;display:grid;place-items:center;box-shadow:var(--shadow);font-size:29px}.f1{top:48px;right:6%}.f2{top:165px;left:3%}.f3{bottom:90px;right:5%}.f4{bottom:55px;left:12%}.section{padding:70px 0}.section-head{display:flex;align-items:end;justify-content:space-between;gap:20px;margin-bottom:25px}.section h2{font-size:38px;line-height:1.2;margin:0}.section-head p{color:var(--muted);margin:5px 0 0}.link{color:var(--blue);font-weight:900}.quick{background:#fff;border:1px solid var(--line);border-radius:26px;box-shadow:var(--shadow);display:grid;grid-template-columns:repeat(4,1fr);overflow:hidden}.quick-card{padding:25px;display:flex;align-items:center;gap:15px;border-left:1px solid var(--line)}.quick-card:last-child{border-left:0}.qicon{width:58px;height:58px;border-radius:17px;background:#edf3ff;display:grid;place-items:center;font-size:27px;flex:0 0 auto}.quick-card:nth-child(2n) .qicon{background:#fff5d8}.quick-card h3{margin:0 0 4px;font-size:20px}.quick-card p{margin:0;color:var(--muted);font-size:13px}.category-grid{display:grid;grid-template-columns:repeat(5,1fr);gap:14px}.category{background:#fff;border:1px solid var(--line);border-radius:22px;padding:25px 17px;text-align:center;transition:.2s;box-shadow:0 8px 24px rgba(25,57,112,.04)}.category:hover{transform:translateY(-3px);box-shadow:var(--shadow)}.category .emoji{font-size:36px}.category h3{margin:8px 0 2px;font-size:20px}.category p{margin:0;color:var(--muted);font-size:13px}.steps{background:#edf3ff;border-radius:30px;padding:34px}.step-grid{display:grid;grid-template-columns:repeat(5,1fr);gap:12px}.step{background:#fff;border-radius:22px;padding:22px 15px;text-align:center;position:relative;border:1px solid #e2e9f8}.num{width:32px;height:32px;border-radius:50%;background:var(--blue);color:#fff;display:grid;place-items:center;margin:0 auto 12px;font-weight:950}.step h3{margin:0 0 5px}.step p{margin:0;color:var(--muted);font-size:13px}.learn-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}.learn-card{border-radius:28px;padding:30px;min-height:230px;border:1px solid var(--line);position:relative;overflow:hidden}.learn-card.green{background:#effaf3}.learn-card.bluebg{background:#edf3ff}.learn-card.purple{background:#f5efff}.learn-card .art{position:absolute;left:18px;bottom:-8px;font-size:78px;opacity:.9}.learn-card h3{font-size:27px;margin:0 0 8px}.learn-card p{color:#5d687d;max-width:60%}.tools{background:#fff;border:1px solid var(--line);border-radius:30px;padding:32px;box-shadow:var(--shadow)}.tool-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}.tool{border:1px solid var(--line);border-radius:19px;padding:18px;display:flex;gap:13px;align-items:center;background:#fff}.tool:hover{border-color:#b9ccf7}.tool-icon{width:52px;height:52px;border-radius:15px;background:#f2f5fb;display:grid;place-items:center;font-size:24px}.tool h3{margin:0}.tool p{margin:0;color:var(--muted);font-size:12px}.articles{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}.article{background:#fff;border:1px solid var(--line);border-radius:25px;overflow:hidden;box-shadow:0 8px 25px rgba(25,57,112,.04)}.article .visual{height:145px;display:grid;place-items:center;font-size:65px;background:linear-gradient(135deg,#edf3ff,#fff8df)}.article-body{padding:21px}.tag{font-size:12px;color:var(--blue);font-weight:900}.article h3{font-size:21px;line-height:1.4;margin:7px 0}.article p{color:var(--muted);font-size:14px;margin:0 0 15px}.article button{border:0;background:#edf3ff;color:var(--blue);border-radius:12px;padding:8px 13px;font-weight:900;cursor:pointer}.course{margin:70px 0;background:linear-gradient(115deg,#0c3ea8,#1466f2);color:#fff;border-radius:34px;padding:45px;display:grid;grid-template-columns:1fr 300px;align-items:center;gap:25px;overflow:hidden;position:relative}.course:after{content:"";position:absolute;width:260px;height:260px;border-radius:50%;background:rgba(255,197,45,.16);left:-70px;bottom:-120px}.course h2{font-size:40px;margin:0 0 10px}.course p{color:#e7efff;font-size:18px;max-width:750px}.course .primary{background:#ffc52d;color:#10275b;box-shadow:none}.course-badge{background:rgba(255,255,255,.12);border:1px solid rgba(255,255,255,.25);border-radius:24px;padding:25px;text-align:center;font-size:48px}.footer{background:#08183d;color:#dfe7fb;padding:45px 0 25px}.footer-grid{display:grid;grid-template-columns:2fr 1fr 1fr;gap:35px}.footer .logo{color:#fff}.footer p{color:#aebbd8}.footer a{color:#dfe7fb}.copyright{border-top:1px solid rgba(255,255,255,.12);margin-top:30px;padding-top:18px;color:#91a2c7;font-size:13px}.mobile-menu{display:none}.toast{position:fixed;bottom:22px;left:50%;transform:translateX(-50%) translateY(120px);background:#071a46;color:#fff;padding:13px 20px;border-radius:999px;z-index:100;transition:.25s;box-shadow:var(--shadow)}.toast.show{transform:translateX(-50%) translateY(0)}.hidden{display:none!important}
-@media(max-width:900px){.container{width:min(100% - 28px,680px)}.topbar{height:72px}.nav{justify-content:space-between}.navlinks,.nav-actions .primary{display:none}.hamb{display:grid}.mobile-menu{position:fixed;top:72px;right:12px;left:12px;background:#fff;border:1px solid var(--line);border-radius:20px;box-shadow:var(--shadow);padding:12px;z-index:49}.mobile-menu.open{display:block}.mobile-menu a{display:block;padding:13px 15px;font-weight:900;border-radius:12px}.mobile-menu a:hover{background:#edf3ff}.hero{padding-top:32px}.hero-grid{grid-template-columns:1fr;gap:10px}.hero-copy{text-align:center}.lead{margin:0 auto}.chips,.trust{justify-content:center}.searchbox{text-align:right}.hero-art{min-height:410px;margin-top:0;order:2}.yellow-disc{width:300px;height:300px;top:45px}.portrait{height:430px;width:100%}.float{width:54px;height:54px;border-radius:16px;font-size:23px}.f1{top:25px;right:2%}.f2{top:140px;left:1%}.f3{bottom:45px;right:2%}.f4{bottom:25px;left:8%}.quick{grid-template-columns:1fr 1fr}.quick-card{border-left:0;border-bottom:1px solid var(--line)}.quick-card:nth-child(odd){border-left:1px solid var(--line)}.category-grid{grid-template-columns:1fr 1fr}.step-grid{grid-template-columns:1fr 1fr}.learn-grid,.articles,.tool-grid{grid-template-columns:1fr}.section{padding:52px 0}.section h2{font-size:31px}.section-head{align-items:start}.course{grid-template-columns:1fr;padding:32px 24px;text-align:center}.course h2{font-size:31px}.course-badge{display:none}.footer-grid{grid-template-columns:1fr 1fr}.footer-grid>div:first-child{grid-column:1/-1}}
-@media(max-width:520px){.logo{font-size:24px}.logo small{font-size:8px}.hero h1{font-size:42px;letter-spacing:-1.5px}.lead{font-size:17px}.searchbox input{min-width:0;font-size:15px}.searchbox button{padding:0 14px}.quick{grid-template-columns:1fr}.quick-card,.quick-card:nth-child(odd){border-left:0}.category{padding:20px 10px}.steps{padding:20px 12px}.step-grid{grid-template-columns:1fr}.learn-card{min-height:200px}.articles .article{border-radius:22px}.course{border-radius:27px}.footer-grid{grid-template-columns:1fr}.footer-grid>div:first-child{grid-column:auto}}
-body.dark{--bg:#071328;--card:#0d1d38;--navy:#eef4ff;--muted:#a9b7d1;--line:#243756}body.dark .topbar,body.dark .searchbox,body.dark .quick,body.dark .category,body.dark .tool,body.dark .article,body.dark .iconbtn,body.dark .mobile-menu{background:#0d1d38;color:#eef4ff}body.dark .hero{background:radial-gradient(circle at 78% 25%,#132a54 0,transparent 28%),linear-gradient(#071328,#071328)}body.dark .searchbox input{color:#eef4ff}body.dark .chip{background:#0d1d38;color:#d8e2f4}body.dark .article .visual{background:linear-gradient(135deg,#13264b,#3c3110)}body.dark .footer{background:#040b1b}
-.modal{position:fixed;inset:0;background:rgba(3,12,32,.62);backdrop-filter:blur(5px);z-index:120;display:none;align-items:center;justify-content:center;padding:18px}.modal.open{display:flex}.modal-card{width:min(650px,100%);background:#fff;color:#071a46;border-radius:28px;padding:30px;box-shadow:0 30px 80px rgba(0,0,0,.25);position:relative}.dark .modal-card{background:#0d1d38;color:#eef4ff}.modal-close{position:absolute;left:18px;top:18px;width:38px;height:38px;border-radius:50%;border:1px solid var(--line);background:transparent;cursor:pointer}.modal-card h2{margin:0 0 12px;font-size:30px}.modal-card p{color:var(--muted);font-size:17px}.modal-card .mini{background:#edf3ff;border-radius:18px;padding:17px;margin-top:16px}.dark .modal-card .mini{background:#13264b}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;font-family:"Tajawal","Segoe UI",Tahoma,Arial,sans-serif;background:var(--bg);color:var(--navy);line-height:1.7}
+a{text-decoration:none;color:inherit}
+button,input{font:inherit}
+.container{width:min(1180px,calc(100% - 36px));margin:auto}
+.topbar{height:78px;background:#fff;border-bottom:1px solid var(--line);position:sticky;top:0;z-index:50}
+.nav{height:100%;display:flex;align-items:center;gap:28px}
+.logo{font-weight:950;font-size:29px;letter-spacing:-1.5px;color:#121d38;white-space:nowrap}
+.logo b{color:var(--blue)}
+.logo small{display:block;font-size:10px;font-weight:500;letter-spacing:0;color:#7c8495;margin-top:-8px}
+.navlinks{display:flex;gap:30px;margin:auto;font-weight:800}
+.navlinks a{padding:27px 0;border-bottom:3px solid transparent}
+.navlinks a:hover,.navlinks a.active{color:var(--blue);border-color:var(--blue)}
+.nav-actions{display:flex;align-items:center;gap:12px}
+.iconbtn{width:42px;height:42px;border:1px solid var(--line);background:#fff;border-radius:50%;display:grid;place-items:center;font-size:20px;cursor:pointer}
+.primary{background:var(--blue);color:#fff;border:0;border-radius:16px;padding:13px 22px;font-weight:900;box-shadow:0 10px 24px rgba(18,91,234,.22);cursor:pointer}
+.hamb{display:none}
+
+.hero{padding:56px 0 22px;background:radial-gradient(circle at 78% 25%,#eaf1ff 0,transparent 28%),linear-gradient(#fff,#f7f9fe)}
+.hero-grid{display:grid;grid-template-columns:1fr 1.05fr;gap:48px;align-items:center;direction:ltr}
+.hero-copy{direction:rtl}
+.eyebrow{display:inline-flex;align-items:center;gap:8px;background:#edf3ff;color:var(--blue);border-radius:999px;padding:8px 17px;font-weight:900}
+.hero h1{font-size:clamp(43px,5vw,72px);line-height:1.15;margin:18px 0 12px;letter-spacing:-2px}
+.hero h1 .blue{color:var(--blue)}
+.hero h1 .underline{position:relative;display:inline-block}
+.hero h1 .underline:after{content:"";position:absolute;height:7px;background:var(--yellow);left:2px;right:20px;bottom:-4px;border-radius:99px;transform:rotate(-2deg)}
+.lead{font-size:20px;color:#4e5c76;max-width:680px}
+.searchbox{display:flex;background:#fff;border:1px solid #dce3ef;border-radius:22px;padding:7px;box-shadow:0 12px 30px rgba(25,57,112,.06);margin-top:22px}
+.searchbox input{border:0;outline:0;flex:1;padding:15px 17px;background:transparent;color:var(--navy);font-size:17px}
+.searchbox button{border:0;background:var(--blue);color:#fff;border-radius:17px;padding:0 23px;font-weight:900;cursor:pointer}
+.chips{display:flex;gap:9px;flex-wrap:wrap;margin:13px 0}
+.chip{border:1px solid var(--line);background:#fff;border-radius:999px;padding:7px 13px;color:#58647a;cursor:pointer}
+.trust{display:flex;gap:22px;flex-wrap:wrap;color:#4f5c73;font-weight:800;margin-top:18px}
+.trust span:before{content:"✓";color:var(--green);font-weight:950;margin-left:6px}
+
+.hero-art{direction:rtl;position:relative;min-height:510px;display:flex;align-items:flex-end;justify-content:center}
+.yellow-disc{position:absolute;width:410px;height:410px;border-radius:50%;background:linear-gradient(145deg,#ffd43e,#f7b91d);top:55px;left:50%;transform:translateX(-50%);box-shadow:0 18px 50px rgba(255,197,45,.16)}
+.portrait{position:relative;z-index:2;width:min(640px,100%);height:570px;object-fit:contain;object-position:center bottom;filter:drop-shadow(0 22px 25px rgba(7,26,70,.13))}
+.float{position:absolute;z-index:3;width:66px;height:66px;background:#fff;border:1px solid var(--line);border-radius:19px;display:grid;place-items:center;box-shadow:var(--shadow);font-size:29px}
+.f1{top:48px;right:6%}
+.f2{top:165px;left:3%}
+.f3{bottom:90px;right:5%}
+.f4{bottom:55px;left:12%}
+
+.section{padding:70px 0}
+.section-head{display:flex;align-items:end;justify-content:space-between;gap:20px;margin-bottom:25px}
+.section h2{font-size:38px;line-height:1.2;margin:0}
+.section-head p{color:var(--muted);margin:5px 0 0}
+.link{color:var(--blue);font-weight:900}
+
+.quick{background:#fff;border:1px solid var(--line);border-radius:26px;box-shadow:var(--shadow);display:grid;grid-template-columns:repeat(4,1fr);overflow:hidden}
+.quick-card{padding:25px;display:flex;align-items:center;gap:15px;border-left:1px solid var(--line)}
+.quick-card:last-child{border-left:0}
+.qicon{width:58px;height:58px;border-radius:17px;background:#edf3ff;display:grid;place-items:center;font-size:27px;flex:0 0 auto}
+.quick-card:nth-child(2n) .qicon{background:#fff5d8}
+.quick-card h3{margin:0 0 4px;font-size:20px}
+.quick-card p{margin:0;color:var(--muted);font-size:13px}
+
+.category-grid{display:grid;grid-template-columns:repeat(5,1fr);gap:14px}
+.category{background:#fff;border:1px solid var(--line);border-radius:22px;padding:25px 17px;text-align:center;transition:.2s;box-shadow:0 8px 24px rgba(25,57,112,.04)}
+.category:hover{transform:translateY(-3px);box-shadow:var(--shadow)}
+.category .emoji{font-size:36px}
+.category h3{margin:8px 0 2px;font-size:20px}
+.category p{margin:0;color:var(--muted);font-size:13px}
+
+.steps{background:#edf3ff;border-radius:30px;padding:34px}
+.step-grid{display:grid;grid-template-columns:repeat(5,1fr);gap:12px}
+.step{background:#fff;border-radius:22px;padding:22px 15px;text-align:center;position:relative;border:1px solid #e2e9f8}
+.num{width:32px;height:32px;border-radius:50%;background:var(--blue);color:#fff;display:grid;place-items:center;margin:0 auto 12px;font-weight:950}
+.step h3{margin:0 0 5px}
+.step p{margin:0;color:var(--muted);font-size:13px}
+
+.learn-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.learn-card{border-radius:28px;padding:30px;min-height:230px;border:1px solid var(--line);position:relative;overflow:hidden}
+.learn-card.green{background:#effaf3}
+.learn-card.bluebg{background:#edf3ff}
+.learn-card.purple{background:#f5efff}
+.learn-card .art{position:absolute;left:18px;bottom:-8px;font-size:78px;opacity:.9}
+.learn-card h3{font-size:27px;margin:0 0 8px}
+.learn-card p{color:#5d687d;max-width:60%}
+
+.tools{background:#fff;border:1px solid var(--line);border-radius:30px;padding:32px;box-shadow:var(--shadow)}
+.tool-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+.tool{border:1px solid var(--line);border-radius:19px;padding:18px;display:flex;gap:13px;align-items:center;background:#fff}
+.tool:hover{border-color:#b9ccf7}
+.tool-icon{width:52px;height:52px;border-radius:15px;background:#f2f5fb;display:grid;place-items:center;font-size:24px}
+.tool h3{margin:0}
+.tool p{margin:0;color:var(--muted);font-size:12px}
+
+.articles{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.article{background:#fff;border:1px solid var(--line);border-radius:25px;overflow:hidden;box-shadow:0 8px 25px rgba(25,57,112,.04)}
+.article .visual{height:145px;display:grid;place-items:center;font-size:65px;background:linear-gradient(135deg,#edf3ff,#fff8df)}
+.article-body{padding:21px}
+.tag{font-size:12px;color:var(--blue);font-weight:900}
+.article h3{font-size:21px;line-height:1.4;margin:7px 0}
+.article p{color:var(--muted);font-size:14px;margin:0 0 15px}
+.article button{border:0;background:#edf3ff;color:var(--blue);border-radius:12px;padding:8px 13px;font-weight:900;cursor:pointer}
+
+.course{margin:70px 0;background:linear-gradient(115deg,#0c3ea8,#1466f2);color:#fff;border-radius:34px;padding:45px;display:grid;grid-template-columns:1fr 300px;align-items:center;gap:25px;overflow:hidden;position:relative}
+.course:after{content:"";position:absolute;width:260px;height:260px;border-radius:50%;background:rgba(255,197,45,.16);left:-70px;bottom:-120px}
+.course h2{font-size:40px;margin:0 0 10px}
+.course p{color:#e7efff;font-size:18px;max-width:750px}
+.course .primary{background:#ffc52d;color:#10275b;box-shadow:none}
+.course-badge{background:rgba(255,255,255,.12);border:1px solid rgba(255,255,255,.25);border-radius:24px;padding:25px;text-align:center;font-size:48px}
+
+.footer{background:#08183d;color:#dfe7fb;padding:45px 0 25px}
+.footer-grid{display:grid;grid-template-columns:2fr 1fr 1fr;gap:35px}
+.footer .logo{color:#fff}
+.footer p{color:#aebbd8}
+.footer a{color:#dfe7fb}
+.copyright{border-top:1px solid rgba(255,255,255,.12);margin-top:30px;padding-top:18px;color:#91a2c7;font-size:13px}
+
+.mobile-menu{display:none}
+.toast{position:fixed;bottom:22px;left:50%;transform:translateX(-50%) translateY(120px);background:#071a46;color:#fff;padding:13px 20px;border-radius:999px;z-index:100;transition:.25s;box-shadow:var(--shadow)}
+.toast.show{transform:translateX(-50%) translateY(0)}
+.hidden{display:none!important}
+
+@media(max-width:900px){
+.container{width:min(100% - 28px,680px)}
+.topbar{height:72px}
+.nav{justify-content:space-between}
+.navlinks,.nav-actions .primary{display:none}
+.hamb{display:grid}
+.mobile-menu{position:fixed;top:72px;right:12px;left:12px;background:#fff;border:1px solid var(--line);border-radius:20px;box-shadow:var(--shadow);padding:12px;z-index:49}
+.mobile-menu.open{display:block}
+.mobile-menu a{display:block;padding:13px 15px;font-weight:900;border-radius:12px}
+.mobile-menu a:hover{background:#edf3ff}
+.hero{padding-top:32px}
+.hero-grid{grid-template-columns:1fr;gap:10px}
+.hero-copy{text-align:center}
+.lead{margin:0 auto}
+.chips,.trust{justify-content:center}
+.searchbox{text-align:right}
+.hero-art{min-height:410px;margin-top:0;order:2}
+.yellow-disc{width:300px;height:300px;top:45px}
+.portrait{height:430px;width:100%}
+.float{width:54px;height:54px;border-radius:16px;font-size:23px}
+.f1{top:25px;right:2%}
+.f2{top:140px;left:1%}
+.f3{bottom:45px;right:2%}
+.f4{bottom:25px;left:8%}
+.quick{grid-template-columns:1fr 1fr}
+.quick-card{border-left:0;border-bottom:1px solid var(--line)}
+.quick-card:nth-child(odd){border-left:1px solid var(--line)}
+.category-grid{grid-template-columns:1fr 1fr}
+.step-grid{grid-template-columns:1fr 1fr}
+.learn-grid,.articles,.tool-grid{grid-template-columns:1fr}
+.section{padding:52px 0}
+.section h2{font-size:31px}
+.section-head{align-items:start}
+.course{grid-template-columns:1fr;padding:32px 24px;text-align:center}
+.course h2{font-size:31px}
+.course-badge{display:none}
+.footer-grid{grid-template-columns:1fr 1fr}
+.footer-grid>div:first-child{grid-column:1/-1}
+}
+
+@media(max-width:520px){
+.logo{font-size:24px}
+.logo small{font-size:8px}
+.hero h1{font-size:42px;letter-spacing:-1.5px}
+.lead{font-size:17px}
+.searchbox input{min-width:0;font-size:15px}
+.searchbox button{padding:0 14px}
+.quick{grid-template-columns:1fr}
+.quick-card,.quick-card:nth-child(odd){border-left:0}
+.category{padding:20px 10px}
+.steps{padding:20px 12px}
+.step-grid{grid-template-columns:1fr}
+.learn-card{min-height:200px}
+.articles .article{border-radius:22px}
+.course{border-radius:27px}
+.footer-grid{grid-template-columns:1fr}
+.footer-grid>div:first-child{grid-column:auto}
+}
+
+body.dark{--bg:#071328;--card:#0d1d38;--navy:#eef4ff;--muted:#a9b7d1;--line:#243756}
+body.dark .topbar,
+body.dark .searchbox,
+body.dark .quick,
+body.dark .category,
+body.dark .tool,
+body.dark .article,
+body.dark .iconbtn,
+body.dark .mobile-menu{background:#0d1d38;color:#eef4ff}
+body.dark .hero{background:radial-gradient(circle at 78% 25%,#132a54 0,transparent 28%),linear-gradient(#071328,#071328)}
+body.dark .searchbox input{color:#eef4ff}
+body.dark .chip{background:#0d1d38;color:#d8e2f4}
+body.dark .article .visual{background:linear-gradient(135deg,#13264b,#3c3110)}
+body.dark .footer{background:#040b1b}
+
+.modal{position:fixed;inset:0;background:rgba(3,12,32,.62);backdrop-filter:blur(5px);z-index:120;display:none;align-items:center;justify-content:center;padding:18px}
+.modal.open{display:flex}
+.modal-card{width:min(650px,100%);background:#fff;color:#071a46;border-radius:28px;padding:30px;box-shadow:0 30px 80px rgba(0,0,0,.25);position:relative}
+.dark .modal-card{background:#0d1d38;color:#eef4ff}
+.modal-close{position:absolute;left:18px;top:18px;width:38px;height:38px;border-radius:50%;border:1px solid var(--line);background:transparent;cursor:pointer}
+.modal-card h2{margin:0 0 12px;font-size:30px}
+.modal-card p{color:var(--muted);font-size:17px}
+.modal-card .mini{background:#edf3ff;border-radius:18px;padding:17px;margin-top:16px}
+.dark .modal-card .mini{background:#13264b}
 </style>
-<script type="application/ld+json">{"@context":"https://schema.org","@type":"WebSite","name":"AiFrahat.com","url":"https://aifrahat.com/","description":"تعلم الذكاء الصناعى ببساطة واستخدمه في حياتك وشغلك.","inLanguage":"ar"}</script>
-</head>
-<body>
-<header class="topbar"><div class="container nav"><button class="iconbtn hamb" id="hamb" aria-label="فتح القائمة">☰</button><a class="logo" href="#top"><b>Ai</b>Frahat.com<small>الذكاء الصناعى ببساطة</small></a><nav class="navlinks"><a class="active" href="#top">الرئيسية</a><a href="#discover">اكتشف</a><a href="#learn">تعلّم</a><a href="#tools">الأدوات المجانية</a><a href="#course">الكورس</a></nav><div class="nav-actions"><button class="iconbtn" id="theme" aria-label="تبديل المظهر">◐</button><a class="primary" href="#course">ابدأ الآن ←</a></div></div></header>
-<div class="mobile-menu" id="mobileMenu"><a href="#top">الرئيسية</a><a href="#discover">اكتشف</a><a href="#learn">تعلّم</a><a href="#tools">الأدوات المجانية</a><a href="#course">الكورس المجانى</a></div>
-<main id="top">
-<section class="hero"><div class="container hero-grid"><div class="hero-copy"><span class="eyebrow">✦ تعلّم الذكاء الصناعى بسهولة وبدون تعقيد</span><h1>عايز تعمل إيه؟<br><span class="blue">تعالى نعلمك تعمله</span><br>بالذكاء الصناعى.</h1><p class="lead"><strong>مش لازم تكون خبير.</strong><br>هنمشي معاك خطوة بخطوة، وبأدوات مجانية، عشان تنجز أكتر وتوفر وقتك وفلوسك.</p><div class="searchbox"><input id="search" placeholder="اكتب اللي عايز تعمله..." aria-label="ابحث في AiFrahat"><button id="searchBtn">ابحث</button></div><div class="chips"><button class="chip" data-q="CV">اعمل CV</button><button class="chip" data-q="صورة">اعمل صورة</button><button class="chip" data-q="PDF">لخص PDF</button><button class="chip" data-q="رسالة">اكتب رسالة رسمية</button></div><div class="trust"><span>مجاني 100%</span><span>بدون خبرة مطلوبة</span><span>مناسب للجميع</span></div></div><div class="hero-art"><div class="yellow-disc"></div><img class="portrait" src="assets/portrait.png" alt="صورة صاحب AiFrahat بملابس زرقاء" loading="eager"><div class="float f1">✦</div><div class="float f2">💬</div><div class="float f3">🎓</div><div class="float f4">☝️</div></div></div></section>
-<section class="section"><div class="container"><div class="quick"><div class="quick-card"><div class="qicon">🔎</div><div><h3>اكتشف</h3><p>اعرف أفضل استخدامات الذكاء الصناعى</p></div></div><div class="quick-card"><div class="qicon">🎓</div><div><h3>تعلّم</h3><p>دروس قصيرة وبسيطة خطوة بخطوة</p></div></div><div class="quick-card"><div class="qicon">☝️</div><div><h3>جرّب</h3><p>أمثلة عملية وتجارب سهلة</p></div></div><div class="quick-card"><div class="qicon">📈</div><div><h3>أنجز أكثر</h3><p>وفر وقتك وركز على المهم</p></div></div></div></div></section>
-<section class="section" id="discover"><div class="container"><div class="section-head"><div><h2>أو اختار من هنا</h2><p>إيه اللي نفسك تعمله النهارده؟</p></div><a class="link" href="#articles">عرض كل الاستخدامات ←</a></div><div class="category-grid"><a class="category" href="#articles"><div class="emoji">✒️</div><h3>كتابة</h3><p>اكتب محتوى أفضل وأسرع</p></a><a class="category" href="#articles"><div class="emoji">🎨</div><h3>صور</h3><p>اعمل صور مبهرة بسهولة</p></a><a class="category" href="#articles"><div class="emoji">💼</div><h3>شغل</h3><p>أنجز شغلك باحترافية</p></a><a class="category" href="#articles"><div class="emoji">📚</div><h3>دراسة</h3><p>ذاكر وتعلم بذكاء</p></a><a class="category" href="#articles"><div class="emoji">🎬</div><h3>فيديو</h3><p>اعمل فيديوهات بسهولة</p></a><a class="category" href="#articles"><div class="emoji">🎙️</div><h3>صوت</h3><p>استخدم قوة الصوت</p></a><a class="category" href="#articles"><div class="emoji">📄</div><h3>ملفات</h3><p>لخص وافهم ملفاتك</p></a><a class="category" href="#articles"><div class="emoji">🏠</div><h3>حياتك اليومية</h3><p>خلي يومك أسهل</p></a><a class="category" href="#articles"><div class="emoji">🧠</div><h3>تطوير نفسك</h3><p>تعلم أسرع وطور مهاراتك</p></a><a class="category" href="#course"><div class="emoji">⚡</div><h3>إنتاجية</h3><p>أنجز أكثر في وقت أقل</p></a></div></div></section>
-<section class="section"><div class="container steps"><div class="section-head"><div><h2>إزاي تتعلم؟</h2><p>طريق بسيط من أول سؤال لنتيجة حقيقية.</p></div></div><div class="step-grid"><div class="step"><div class="num">1</div><h3>اختار اللي عايز تعمله</h3><p>قول لنا أنت محتاج إيه.</p></div><div class="step"><div class="num">2</div><h3>اتعلم خطوة بخطوة</h3><p>شرح بسيط ومحدد.</p></div><div class="step"><div class="num">3</div><h3>نعرفك الأدوات</h3><p>مجانية ومناسبة للمهمة.</p></div><div class="step"><div class="num">4</div><h3>طبّق عملي</h3><p>مثال تقدر تجربه بنفسك.</p></div><div class="step"><div class="num">5</div><h3>شوف النتيجة</h3><p>اتأكد إنك وصلت لأفضل نتيجة.</p></div></div></div></section>
-<section class="section" id="learn"><div class="container"><div class="section-head"><div><h2>ابدأ رحلتك في التعلّم</h2><p>مش عارف تبدأ منين؟ اختار طريقك.</p></div><a class="link" href="#articles">عرض الدروس والمقالات ←</a></div><div class="learn-grid"><div class="learn-card green"><h3>🌱 للمبتدئين</h3><p>مش عارف تبدأ منين؟ ابدأ من هنا وتعلم الأساسيات من غير مصطلحات معقدة.</p><a class="primary" href="#articles">ابدأ الآن</a><div class="art">🌱</div></div><div class="learn-card bluebg"><h3>🔧 استخدام AI</h3><p>اتعلم تعمل حاجات مفيدة بنفسك في الشغل والحياة والدراسة.</p><a class="primary" href="#articles">ابدأ الآن</a><div class="art">💻</div></div><div class="learn-card purple"><h3>🧠 افهم AI</h3><p>افهم الفكرة من غير تعقيد، واعرف إمتى تستخدم الذكاء الصناعى وإمتى لا.</p><a class="primary" href="#articles">ابدأ الآن</a><div class="art">🧠</div></div></div></div></section>
-<section class="section" id="tools"><div class="container tools"><div class="section-head"><div><h2>أدوات مجانية نرشحها لك</h2><p>اختيارات عملية حسب اللي عايز تعمله.</p></div><a class="link" href="https://chatgpt.com/" target="_blank" rel="noopener">ابدأ بتجربة أداة ←</a></div><div class="tool-grid"><a class="tool" href="https://chatgpt.com/" target="_blank" rel="noopener"><div class="tool-icon">🟢</div><div><h3>ChatGPT</h3><p>كتابة، أفكار، تعلم ومساعدة يومية</p></div></a><a class="tool" href="https://www.canva.com/" target="_blank" rel="noopener"><div class="tool-icon">🎨</div><div><h3>Canva</h3><p>تصميم صور ومنشورات بسهولة</p></div></a><a class="tool" href="https://www.notion.so/product/ai" target="_blank" rel="noopener"><div class="tool-icon">⬛</div><div><h3>Notion AI</h3><p>تنظيم وملاحظات ومحتوى</p></div></a><a class="tool" href="https://www.remove.bg/" target="_blank" rel="noopener"><div class="tool-icon">🪄</div><div><h3>remove.bg</h3><p>إزالة خلفية الصور</p></div></a><a class="tool" href="https://ttsmaker.com/" target="_blank" rel="noopener"><div class="tool-icon">🎙️</div><div><h3>TTSMaker</h3><p>تحويل النص إلى صوت</p></div></a><a class="tool" href="https://www.pdfgear.com/" target="_blank" rel="noopener"><div class="tool-icon">📄</div><div><h3>PDFgear</h3><p>قراءة وتلخيص ملفات PDF</p></div></a></div></div></section>
-<section class="section" id="articles"><div class="container"><div class="section-head"><div><h2>اتعلم حاجة مفيدة النهارده</h2><p>مقالات قصيرة من AiFrahat تساعدك تعمل حاجة حقيقية.</p></div><span class="link">12 درسًا ومقالًا</span></div><div class="articles" id="articleGrid">
-<article class="article" data-key="الذكاء الصناعى AI مبتدئين"><div class="visual">🤖</div><div class="article-body"><span class="tag">للمبتدئين</span><h3>الذكاء الصناعى ببساطة: تقدر تعمل بيه إيه؟</h3><p>فهم سريع للذكاء الصناعى وأهم الاستخدامات اللي تقدر تبدأ بها من النهارده.</p><button onclick="openArticle('الذكاء الصناعى ببساطة','ابدأ بفهم 3 أشياء: اسأل، راجع، وطبّق. الذكاء الصناعى مساعد قوي، لكن النتيجة الأفضل تأتي من توجيه واضح ومراجعة بشرية.')">اقرأ الدرس ←</button></div></article>
-<article class="article" data-key="CV شغل كتابة"><div class="visual">💼</div><div class="article-body"><span class="tag">شغل</span><h3>إزاي تعمل CV محترم بالذكاء الصناعى؟</h3><p>رتب خبرتك، اكتب إنجازاتك، وخلي الـCV أوضح من غير ما تخترع معلومات.</p><button onclick="openArticle('اعمل CV بالذكاء الصناعى','اجمع بياناتك الحقيقية أولًا، ثم اطلب من الأداة تنظيمها وصياغتها. راجع كل معلومة قبل إرسال الـCV.')">اقرأ الدرس ←</button></div></article>
-<article class="article" data-key="صورة تصميم صور"><div class="visual">🎨</div><div class="article-body"><span class="tag">صور</span><h3>إزاي تعمل صورة احترافية من غير خبرة؟</h3><p>فكرة واضحة + وصف جيد + مراجعة النتيجة = بداية ممتازة.</p><button onclick="openArticle('اعمل صورة بالذكاء الصناعى','حدد الموضوع، الأسلوب، الإضاءة، المقاس، وما الذي لا تريده. ثم عدّل الوصف تدريجيًا بدل تغيير كل شيء مرة واحدة.')">اقرأ الدرس ←</button></div></article>
-<article class="article" data-key="PDF ملفات دراسة"><div class="visual">📄</div><div class="article-body"><span class="tag">ملفات</span><h3>إزاي تلخص PDF وتفهمه أسرع؟</h3><p>خلي الأداة تستخرج الأفكار الرئيسية ثم اطلب أسئلة ومراجعة.</p><button onclick="openArticle('لخص PDF','ابدأ بملخص قصير، ثم اطلب أهم المصطلحات، وبعدها اطلب 10 أسئلة مراجعة. لا تعتمد على الملخص وحده في المعلومات المهمة.')">اقرأ الدرس ←</button></div></article>
-<article class="article" data-key="دراسة تعلم مذاكرة"><div class="visual">📚</div><div class="article-body"><span class="tag">دراسة</span><h3>إزاي تستخدم الذكاء الصناعى في المذاكرة؟</h3><p>حوّل الدرس إلى شرح مبسط وأسئلة واختبار قصير يناسب مستواك.</p><button onclick="openArticle('المذاكرة بالذكاء الصناعى','اطلب شرح الفكرة كأنك مبتدئ، ثم مثالًا، ثم أسئلة بدون إجابات، وبعد الحل اطلب تصحيح أخطائك.')">اقرأ الدرس ←</button></div></article>
-<article class="article" data-key="رسالة كتابة شغل"><div class="visual">✉️</div><div class="article-body"><span class="tag">كتابة</span><h3>اكتب رسالة رسمية في دقائق</h3><p>اكتب الهدف والنبرة والبيانات، وسيب الصياغة للأداة ثم راجعها.</p><button onclick="openArticle('اكتب رسالة رسمية','قل لمن تكتب، وما الهدف، وما النبرة المطلوبة. اطلب نسخة قصيرة ومحترمة، ثم عدّلها بصوتك أنت.')">اقرأ الدرس ←</button></div></article>
-<article class="article" data-key="إنتاجية وقت شغل"><div class="visual">⚡</div><div class="article-body"><span class="tag">إنتاجية</span><h3>5 مهام تخلي الذكاء الصناعى يوفر لك وقت</h3><p>تلخيص، ترتيب، مسودات، أفكار، وقوائم متابعة.</p><button onclick="openArticle('وفر وقتك','ابدأ بمهمة متكررة عندك يوميًا. خلي الأداة تعمل المسودة أو التنظيم، ثم احتفظ بالقرار النهائي عندك.')">اقرأ الدرس ←</button></div></article>
-<article class="article" data-key="فلوس مجاني أدوات توفير"><div class="visual">💰</div><div class="article-body"><span class="tag">توفير</span><h3>إزاي تستفيد من أدوات مجانية بدل الاشتراكات؟</h3><p>ابدأ بالمجاني، واعرف حدود كل أداة قبل ما تدفع.</p><button onclick="openArticle('وفر فلوسك','حدد المهمة أولًا، ثم ابحث عن أداة مجانية مناسبة لها. لا تشترك في خدمة قبل أن تعرف أنك ستستخدمها باستمرار.')">اقرأ الدرس ←</button></div></article>
-<article class="article" data-key="Prompt كتابة AI"><div class="visual">🪄</div><div class="article-body"><span class="tag">مهارة</span><h3>يعني إيه Prompt؟ وإزاي تكتب واحد كويس؟</h3><p>الهدف + السياق + المطلوب + شكل النتيجة = بداية قوية.</p><button onclick="openArticle('اكتب Prompt أفضل','اكتب المهمة بوضوح، أعطِ السياق المهم، حدد الجمهور أو الأسلوب، واطلب شكلًا محددًا للإجابة.')">اقرأ الدرس ←</button></div></article>
-<article class="article" data-key="حياة يومية تنظيم"><div class="visual">🏠</div><div class="article-body"><span class="tag">حياتك اليومية</span><h3>خلي يومك أسهل بالذكاء الصناعى</h3><p>خطط أسبوعك، رتب قائمة مشترياتك، وحول الأفكار المبعثرة إلى خطوات.</p><button onclick="openArticle('حياتك اليومية','اطلب تحويل قائمة طويلة إلى أولويات، ثم جدول بسيط، ثم تذكيرات قابلة للتنفيذ.')">اقرأ الدرس ←</button></div></article>
-<article class="article" data-key="أخطاء AI أمان"><div class="visual">🛡️</div><div class="article-body"><span class="tag">وعي</span><h3>أخطاء لازم تتجنبها مع الذكاء الصناعى</h3><p>لا تشارك أسرارًا، راجع المعلومات المهمة، ولا تعتبر كل إجابة حقيقة.</p><button onclick="openArticle('استخدمه بوعي','راجع المعلومات المهمة، لا تضع بيانات سرية بلا داعٍ، واعتبر الذكاء الصناعى مساعدًا وليس بديلًا عن حكمك.')">اقرأ الدرس ←</button></div></article>
-<article class="article" data-key="أسبوع أول تعلم AI"><div class="visual">🚀</div><div class="article-body"><span class="tag">خطة بداية</span><h3>أول أسبوع ليك مع الذكاء الصناعى</h3><p>كل يوم تجربة صغيرة: كتابة، تلخيص، صورة، تنظيم، ثم مراجعة.</p><button onclick="openArticle('أول أسبوع','خصص 15 دقيقة يوميًا لتجربة مهمة حقيقية من حياتك. اكتب ما نجح وما لم ينجح، وطور طريقة طلبك في اليوم التالي.')">اقرأ الدرس ←</button></div></article>
-</div></div></section>
-<section class="container" id="course"><div class="course"><div><span class="eyebrow" style="background:rgba(255,255,255,.13);color:#fff">🎁 كورس مجانى بالكامل من AiFrahat</span><h2>استخدم الذكاء الصناعى في حياتك وشغلك</h2><p>شرح أونلاين من الموبايل أو اللاب، خطوة بخطوة، عشان تطور نفسك، تزود إنتاجيتك ووعيك، وتوفر وقتك وفلوسك باستخدام الذكاء الصناعى بطريقة عملية وبسيطة.</p><a class="primary" href="https://chat.whatsapp.com/DVXV5k7dQDDE6h3t9NNMXn?s=cl&p=a&ilr=1" target="_blank" rel="noopener">انضم للكورس مجانًا ←</a></div><div class="course-badge">🎓<br><small>تعلم • طبّق • طوّر</small></div></div></section>
-<section class="section"><div class="container" style="text-align:center"><h2>إيه اللي تقدر تعمله بالذكاء الصناعى؟</h2><p class="lead" style="margin:12px auto 24px">من أول CV وصورة ورسالة، لحد تنظيم شغلك وتعلم مهارة جديدة. اختار مهمة، وابدأ بخطوة صغيرة.</p><a class="primary" href="#discover">اكتشف الاستخدامات ←</a></div></section>
-</main>
-<footer class="footer"><div class="container"><div class="footer-grid"><div><div class="logo"><b>Ai</b>Frahat.com<small style="color:#aebbd8">الذكاء الصناعى ببساطة</small></div><p>محتوى عملي وأدوات مجانية ودروس قصيرة تساعدك تستخدم الذكاء الصناعى في حياتك وشغلك ببساطة.</p></div><div><h3>AiFrahat</h3><a href="#discover">اكتشف</a><br><a href="#learn">تعلّم</a><br><a href="#tools">الأدوات</a></div><div><h3>ابدأ</h3><a href="#articles">المقالات</a><br><a href="#course">الكورس المجانى</a><br><a href="https://chat.whatsapp.com/DVXV5k7dQDDE6h3t9NNMXn?s=cl&p=a&ilr=1" target="_blank" rel="noopener">مجموعة واتساب</a></div></div><div class="copyright">© 2026 AiFrahat.com — الذكاء الصناعى ببساطة.</div></div></footer>
-<div class="modal" id="articleModal" role="dialog" aria-modal="true" aria-labelledby="modalTitle"><div class="modal-card"><button class="modal-close" onclick="closeArticle()" aria-label="إغلاق">×</button><h2 id="modalTitle"></h2><p id="modalText"></p><div class="mini">💡 <strong>نصيحة AiFrahat:</strong> ابدأ بتجربة صغيرة، راجع النتيجة، وبعدها طوّر طلبك خطوة بخطوة.</div><br><a class="primary" href="#course" onclick="closeArticle()">عايز تتعلم أكتر؟ ←</a></div></div><div class="toast" id="toast"></div>
-<script>
-const menu=document.getElementById('mobileMenu');document.getElementById('hamb').onclick=()=>menu.classList.toggle('open');menu.querySelectorAll('a').forEach(a=>a.onclick=()=>menu.classList.remove('open'));
-const toast=document.getElementById('toast');function showToast(t){toast.textContent=t;toast.classList.add('show');setTimeout(()=>toast.classList.remove('show'),2400)}
-function filter(q){q=(q||'').trim().toLowerCase();let n=0;document.querySelectorAll('.article').forEach(c=>{let ok=!q||c.dataset.key.toLowerCase().includes(q)||c.innerText.toLowerCase().includes(q);c.classList.toggle('hidden',!ok);if(ok)n++});document.getElementById('articles').scrollIntoView({behavior:'smooth'});showToast(n?`لقينا ${n} نتيجة مناسبة 👌`:'ملقيناش نتيجة مطابقة، جرّب كلمة أبسط.');}
-document.getElementById('searchBtn').onclick=()=>filter(document.getElementById('search').value);document.getElementById('search').addEventListener('keydown',e=>{if(e.key==='Enter')filter(e.target.value)});document.querySelectorAll('[data-q]').forEach(b=>b.onclick=()=>{document.getElementById('search').value=b.dataset.q;filter(b.dataset.q)});
-function openArticle(title,text){document.getElementById('modalTitle').textContent=title;document.getElementById('modalText').textContent=text;document.getElementById('articleModal').classList.add('open')}
-function closeArticle(){document.getElementById('articleModal').classList.remove('open')}
-document.getElementById('articleModal').addEventListener('click',e=>{if(e.target.id==='articleModal')closeArticle()});document.addEventListener('keydown',e=>{if(e.key==='Escape')closeArticle()});
-const savedTheme=localStorage.getItem('aifrahat-theme');if(savedTheme==='dark')document.body.classList.add('dark');document.getElementById('theme').onclick=()=>{document.body.classList.toggle('dark');localStorage.setItem('aifrahat-theme',document.body.classList.contains('dark')?'dark':'light')};
+
+<script type="application/ld+json">
+{
+  "@context":"https://schema.org",
+  "@type":"WebSite",
+  "name":"AiFrahat.com",
+  "url":"https://aifrahat.com/",
+  "description":"تعلم الذكاء الصناعى ببساطة واستخدمه في حياتك وشغلك.",
+  "inLanguage":"ar"
+}
 </script>
-</body></html>
+
+</head>
+
+<body>
+
+<header class="topbar">
+<div class="container nav">
+
+<button class="iconbtn hamb" id="hamb" aria-label="فتح القائمة">☰</button>
+
+<a class="logo" href="#top">
+<b>Ai</b>Frahat.com
+<small>الذكاء الصناعى ببساطة</small>
+</a>
+
+<nav class="navlinks">
+<a class="active" href="#top">الرئيسية</a>
+<a href="#discover">اكتشف</a>
+<a href="#learn">تعلّم</a>
+<a href="#tools">الأدوات المجانية</a>
+<a href="#course">الكورس</a>
+</nav>
+
+<div class="nav-actions">
+<button class="iconbtn" id="theme" aria-label="تبديل المظهر">◐</button>
+<a class="primary" href="#course">ابدأ الآن ←</a>
+</div>
+
+</div>
+</header>
+
+<div class="mobile-menu" id="mobileMenu">
+<a href="#top">الرئيسية</a>
+<a href="#discover">اكتشف</a>
+<a href="#learn">تعلّم</a>
+<a href="#tools">الأدوات المجانية</a>
+<a href="#course">الكورس المجانى</a>
+</div>
+
+<main id="top">
+
+<section class="hero">
+<div class="container hero-grid">
+
+<div class="hero-copy">
+
+<span class="eyebrow">✦ تعلّم الذكاء الصناعى بسهولة وبدون تعقيد</span>
+
+<h1>
+عايز تعمل إيه؟<br>
+<span class="blue">تعالى نعلمك تعمله</span><br>
+بالذكاء الصناعى.
+</h1>
+
+<p class="lead">
+<strong>مش لازم تكون خبير.</strong><br>
+هنمشي معاك خطوة بخطوة، وبأدوات مجانية، عشان تنجز أكتر وتوفر وقتك وفلوسك.
+</p>
+
+<div class="searchbox">
+<input id="search" placeholder="اكتب اللي عايز تعمله..." aria-label="ابحث في AiFrahat">
+<button id="searchBtn">ابحث</button>
+</div>
+
+<div class="chips">
+<button class="chip" data-q="CV">اعمل CV</button>
+<button class="chip" data-q="صورة">اعمل صورة</button>
+<button class="chip" data-q="PDF">لخص PDF</button>
+<button class="chip" data-q="رسالة">اكتب رسالة رسمية</button>
+</div>
+
+<div class="trust">
+<span>مجاني 100%</span>
+<span>بدون خبرة مطلوبة</span>
+<span>مناسب للجميع</span>
+</div>
+
+</div>
+
+<div class="hero-art">
+<div class="yellow-disc"></div>
+<img class="portrait" src="assets/portrait.png" alt="صورة صاحب AiFrahat بملابس زرقاء" loading="eager">
+<div class="float f1">✦</div>
+<div class="float f2">💬</div>
+<div class="float f3">🎓</div>
+<div class="float f4">☝️</div>
+</div>
+
+</div>
+</section>
+
+<section class="section">
+<div class="container">
+<div class="quick">
+
+<div class="quick-card">
+<div class="qicon">🔎</div>
+<div>
+<h3>اكتشف</h3>
+<p>اعرف أفضل استخدامات الذكاء الصناعى</p>
+</div>
+</div>
+
+<div class="quick-card">
+<div class="qicon">🎓</div>
+<div>
+<h3>تعلّم</h3>
+<p>دروس قصيرة وبسيطة خطوة بخطوة</p>
+</div>
+</div>
+
+<div class="quick-card">
+<div class="qicon">☝️</div>
+<div>
+<h3>جرّب</h3>
+<p>أمثلة عملية وتجارب سهلة</p>
+</div>
+</div>
+
+<div class="quick-card">
+<div class="qicon">📈</div>
+<div>
+<h3>أنجز أكثر</h3>
+<p>وفر وقتك وركز على المهم</p>
+</div>
+</div>
+
+</div>
+</div>
+</section>
+
+<section class="section" id="discover">
+<div class="container">
+
+<div class="section-head">
+<div>
+<h2>أو اختار من هنا</h2>
+<p>إيه اللي نفسك تعمله النهارده؟</p>
+</div>
+<a class="link" href="#articles">عرض كل الاستخدامات ←</a>
+</div>
+
+<div class="category-grid">
+
+<a class="category" href="#articles">
+<div class="emoji">✒️</div>
+<h3>كتابة</h3>
+<p>اكتب محتوى أفضل وأسرع</p>
+</a>
+
+<a class="category" href="#articles">
+<div class="emoji">🎨</div>
+<h3>صور</h3>
+<p>اعمل صور مبهرة بسهولة</p>
+</a>
+
+<a class="category" href="#articles">
+<div class="emoji">💼</div>
+<h3>شغل</h3>
+<p>أنجز شغلك باحترافية</p>
+</a>
+
+<a class="category" href="#articles">
+<div class="emoji">📚</div>
+<h3>دراسة</h3>
+<p>ذاكر وتعلم بذكاء</p>
+</a>
+
+<a class="category" href="#articles">
+<div class="emoji">🎬</div>
+<h3>فيديو</h3>
+<p>اعمل فيديوهات بسهولة</p>
+</a>
+
+<a class="category" href="#articles">
+<div class="emoji">🎙️</div>
+<h3>صوت</h3>
+<p>استخدم قوة الصوت</p>
+</a>
+
+<a class="category" href="#articles">
+<div class="emoji">📄</div>
+<h3>ملفات</h3>
+<p>لخص وافهم ملفاتك</p>
+</a>
+
+<a class="category" href="#articles">
+<div class="emoji">🏠</div>
+<h3>حياتك اليومية</h3>
+<p>خلي يومك أسهل</p>
+</a>
+
+<a class="category" href="#articles">
+<div class="emoji">🧠</div>
+<h3>تطوير نفسك</h3>
+<p>تعلم أسرع وطور مهاراتك</p>
+</a>
+
+<a class="category" href="#course">
+<div class="emoji">⚡</div>
+<h3>إنتاجية</h3>
+<p>أنجز أكثر في وقت أقل</p>
+</a>
+
+</div>
+</div>
+</section>
+
+<section class="section">
+<div class="container steps">
+
+<div class="section-head">
+<div>
+<h2>إزاي تتعلم؟</h2>
+<p>طريق بسيط من أول سؤال لنتيجة حقيقية.</p>
+</div>
+</div>
+
+<div class="step-grid">
+
+<div class="step">
+<div class="num">1</div>
+<h3>اختار اللي عايز تعمله</h3>
+<p>قول لنا أنت محتاج إيه.</p>
+</div>
+
+<div class="step">
+<div class="num">2</div>
+<h3>اتعلم خطوة بخطوة</h3>
+<p>شرح بسيط ومحدد.</p>
+</div>
+
+<div class="step">
+<div class="num">3</div>
+<h3>نعرفك الأدوات</h3>
+<p>مجانية ومناسبة للمهمة.</p>
+</div>
+
+<div class="step">
+<div class="num">4</div>
+<h3>طبّق عملي</h3>
+<p>مثال تقدر تجربه بنفسك.</p>
+</div>
+
+<div class="step">
+<div class="num">5</div>
+<h3>شوف النتيجة</h3>
+<p>اتأكد إنك وصلت لأفضل نتيجة.</p>
+</div>
+
+</div>
+</div>
+</section>
+
+<section class="section" id="learn">
+<div class="container">
+
+<div class="section-head">
+<div>
+<h2>ابدأ رحلتك في التعلّم</h2>
+<p>مش عارف تبدأ منين؟ اختار طريقك.</p>
+</div>
+<a class="link" href="#articles">عرض الدروس والمقالات ←</a>
+</div>
+
+<div class="learn-grid">
+
+<div class="learn-card green">
+<h3>🌱 للمبتدئين</h3>
+<p>مش عارف تبدأ منين؟ ابدأ من هنا وتعلم الأساسيات من غير مصطلحات معقدة.</p>
+<a class="primary" href="#articles">ابدأ الآن</a>
+<div class="art">🌱</div>
+</div>
+
+<div class="learn-card bluebg">
+<h3>🔧 استخدام AI</h3>
+<p>اتعلم تعمل حاجات مفيدة بنفسك في الشغل والحياة والدراسة.</p>
+<a class="primary" href="#articles">ابدأ الآن</a>
+<div class="art">💻</div>
+</div>
+
+<div class="learn-card purple">
+<h3>🧠 افهم AI</h3>
+<p>افهم الفكرة من غير تعقيد، واعرف إمتى تستخدم الذكاء الصناعى وإمتى لا.</p>
+<a class="primary" href="#articles">ابدأ الآن</a>
+<div class="art">🧠</div>
+</div>
+
+</div>
+</div>
+</section>
+
+<section class="section" id="tools">
+<div class="container tools">
+
+<div class="section-head">
+<div>
+<h2>أدوات مجانية نرشحها لك</h2>
+<p>اختيارات عملية حسب اللي عايز تعمله.</p>
+</div>
+<a class="link" href="https://chatgpt.com/" target="_blank" rel="noopener">ابدأ بتجربة أداة ←</a>
+</div>
+
+<div class="tool-grid">
+
+<a class="tool" href="https://chatgpt.com/" target="_blank" rel="noopener">
+<div class="tool-icon">🟢</div>
+<div>
+<h3>ChatGPT</h3>
+<p>كتابة، أفكار، تعلم ومساعدة يومية</p>
+</div>
+</a>
+
+<a class="tool" href="https://www.canva.com/" target="_blank" rel="noopener">
+<div class="tool-icon">🎨</div>
+<div>
+<h3>Canva</h3>
+<p>تصميم صور ومنشورات بسهولة</p>
+</div>
+</a>
+
+<a class="tool" href="https://www.notion.so/product/ai" target="_blank" rel="noopener">
+<div class="tool-icon">⬛</div>
+<div>
+<h3>Notion AI</h3>
+<p>تنظيم وملاحظات ومحتوى</p>
+</div>
+</a>
+
+<a class="tool" href="https://www.remove.bg/" target="_blank" rel="noopener">
+<div class="tool-icon">🪄</div>
+<div>
+<h3>remove.bg</h3>
+<p>إزالة خلفية الصور</p>
+</div>
+</a>
+
+<a class="tool" href="https://ttsmaker.com/" target="_blank" rel="noopener">
+<div class="tool-icon">🎙️</div>
+<div>
+<h3>TTSMaker</h3>
+<p>تحويل النص إلى صوت</p>
+</div>
+</a>
+
+<a class="tool" href="https://www.pdfgear.com/" target="_blank" rel="noopener">
+<div class="tool-icon">📄</div>
+<div>
+<h3>PDFgear</h3>
+<p>قراءة وتلخيص ملفات PDF</p>
+</div>
+</a>
+
+</div>
+</div>
+</section>
+
+<section class="section" id="articles">
+<div class="container">
+
+<div class="section-head">
+<div>
+<h2>اتعلم حاجة مفيدة النهارده</h2>
+<p>مقالات قصيرة من AiFrahat تساعدك تعمل حاجة حقيقية.</p>
+</div>
+<span class="link">12 درسًا ومقالًا</span>
+</div>
+
+<div class="articles" id="articleGrid">
+
+<article class="article" data-key="الذكاء الصناعى AI مبتدئين">
+<div class="visual">🤖</div>
+<div class="article-body">
+<span class="tag">للمبتدئين</span>
+<h3>الذكاء الصناعى ببساطة: تقدر تعمل بيه إيه؟</h3>
+<p>فهم سريع للذكاء الصناعى وأهم الاستخدامات اللي تقدر تبدأ بها من النهارده.</p>
+<button onclick="openArticle('الذكاء الصناعى ببساطة','ابدأ بفهم 3 أشياء: اسأل، راجع، وطبّق. الذكاء الصناعى مساعد قوي، لكن النتيجة الأفضل تأتي من توجيه واضح ومراجعة بشرية.')">اقرأ الدرس ←</button>
+</div>
+</article>
+
+<article class="article" data-key="CV شغل كتابة">
+<div class="visual">💼</div>
+<div class="article-body">
+<span class="tag">شغل</span>
+<h3>إزاي تعمل CV محترم بالذكاء الصناعى؟</h3>
+<p>رتب خبرتك، اكتب إنجازاتك، وخلي الـCV أوضح من غير ما تخترع معلومات.</p>
+<button onclick="openArticle('اعمل CV بالذكاء الصناعى','اجمع بياناتك الحقيقية أولًا، ثم اطلب من الأداة تنظيمها وصياغتها. راجع كل معلومة قبل إرسال الـCV.')">اقرأ الدرس ←</button>
+</div>
+</article>
+
+<article class="article" data-key="صورة تصميم صور">
+<div class="visual">🎨</div>
+<div class="article-body">
+<span class="tag">صور</span>
+<h3>إزاي تعمل صورة احترافية من غير خبرة؟</h3>
+<p>فكرة واضحة + وصف جيد + مراجعة النتيجة = بداية ممتازة.</p>
+<button onclick="openArticle('اعمل صورة بالذكاء الصناعى','حدد الموضوع، الأسلوب، الإضاءة، المقاس، وما الذي لا تريده. ثم عدّل الوصف تدريجيًا بدل تغيير كل شيء مرة واحدة.')">اقرأ الدرس ←</button>
+</div>
+</article>
+
+<article class="article" data-key="PDF ملفات دراسة">
+<div class="visual">📄</div>
+<div class="article-body">
+<span class="tag">ملفات</span>
+<h3>إزاي تلخص PDF وتفهمه أسرع؟</h3>
+<p>خلي الأداة تستخرج الأفكار الرئيسية ثم اطلب أسئلة ومراجعة.</p>
+<button onclick="openArticle('لخص PDF','ابدأ بملخص قصير، ثم اطلب أهم المصطلحات، وبعدها اطلب 10 أسئلة مراجعة. لا تعتمد على الملخص وحده في المعلومات المهمة.')">اقرأ الدرس ←</button>
+</div>
+</article>
+
+<article class="article" data-key="دراسة تعلم مذاكرة">
+<div class="visual">📚</div>
+<div class="article-body">
+<span class="tag">دراسة</span>
+<h3>إزاي تستخدم الذكاء الصناعى في المذاكرة؟</h3>
+<p>حوّل الدرس إلى شرح مبسط وأسئلة واختبار قصير يناسب مستواك.</p>
+<button onclick="openArticle('المذاكرة بالذكاء الصناعى','اطلب شرح الفكرة كأنك مبتدئ، ثم مثالًا، ثم أسئلة بدون إجابات، وبعد الحل اطلب تصحيح أخطائك.')">اقرأ الدرس ←</button>
+</div>
+</article>
+
+<article class="article" data-key="رسالة كتابة شغل">
+<div class="visual">✉️</div>
+<div class="article-body">
+<span class="tag">كتابة</span>
+<h3>اكتب رسالة رسمية في دقائق</h3>
+<p>اكتب الهدف والنبرة والبيانات، وسيب الصياغة للأداة ثم راجعها.</p>
+<button onclick="openArticle('اكتب رسالة رسمية','قل لمن تكتب، وما الهدف، وما النبرة المطلوبة. اطلب نسخة قصيرة ومحترمة، ثم عدّلها بصوتك أنت.')">اقرأ الدرس ←</button>
+</div>
+</article>
+
+<article class="article" data-key="إنتاجية وقت شغل">
+<div class="visual">⚡</div>
+<div class="article-body">
+<span class="tag">إنتاجية</span>
+<h3>5 مهام تخلي الذكاء الصناعى يوفر لك وقت</h3>
+<p>تلخيص، ترتيب، مسودات، أفكار، وقوائم متابعة.</p>
+<button onclick="openArticle('وفر وقتك','ابدأ بمهمة متكررة عندك يوميًا. خلي الأداة تعمل المسودة أو التنظيم، ثم احتفظ بالقرار النهائي عندك.')">اقرأ الدرس ←</button>
+</div>
+</article>
+
+<article class="article" data-key="فلوس مجاني أدوات توفير">
+<div class="visual">💰</div>
+<div class="article-body">
+<span class="tag">توفير</span>
+<h3>إزاي تستفيد من أدوات مجانية بدل الاشتراكات؟</h3>
+<p>ابدأ بالمجاني، واعرف حدود كل أداة قبل ما تدفع.</p>
+<button onclick="openArticle('وفر فلوسك','حدد المهمة أولًا، ثم ابحث عن أداة مجانية مناسبة لها. لا تشترك في خدمة قبل أن تعرف أنك ستستخدمها باستمرار.')">اقرأ الدرس ←</button>
+</div>
+</article>
+
+<article class="article" data-key="Prompt كتابة AI">
+<div class="visual">🪄</div>
+<div class="article-body">
+<span class="tag">مهارة</span>
+<h3>يعني إيه Prompt؟ وإزاي تكتب واحد كويس؟</h3>
+<p>الهدف + السياق + المطلوب + شكل النتيجة = بداية قوية.</p>
+<button onclick="openArticle('اكتب Prompt أفضل','اكتب المهمة بوضوح، أعطِ السياق المهم، حدد الجمهور أو الأسلوب، واطلب شكلًا محددًا للإجابة.')">اقرأ الدرس ←</button>
+</div>
+</article>
+
+<article class="article" data-key="حياة يومية تنظيم">
+<div class="visual">🏠</div>
+<div class="article-body">
+<span class="tag">حياتك اليومية</span>
+<h3>خلي يومك أسهل بالذكاء الصناعى</h3>
+<p>خطط أسبوعك، رتب قائمة مشترياتك، وحول الأفكار المبعثرة إلى خطوات.</p>
+<button onclick="openArticle('حياتك اليومية','اطلب تحويل قائمة طويلة إلى أولويات، ثم جدول بسيط، ثم تذكيرات قابلة للتنفيذ.')">اقرأ الدرس ←</button>
+</div>
+</article>
+
+<article class="article" data-key="أخطاء AI أمان">
+<div class="visual">🛡️</div>
+<div class="article-body">
+<span class="tag">وعي</span>
+<h3>أخطاء لازم تتجنبها مع الذكاء الصناعى</h3>
+<p>لا تشارك أسرارًا، راجع المعلومات المهمة، ولا تعتبر كل إجابة حقيقة.</p>
+<button onclick="openArticle('استخدمه بوعي','راجع المعلومات المهمة، لا تضع بيانات سرية بلا داعٍ، واعتبر الذكاء الصناعى مساعدًا وليس بديلًا عن حكمك.')">اقرأ الدرس ←</button>
+</div>
+</article>
+
+<article class="article" data-key="أسبوع أول تعلم AI">
+<div class="visual">🚀</div>
+<div class="article-body">
+<span class="tag">خطة بداية</span>
+<h3>أول أسبوع ليك مع الذكاء الصناعى</h3>
+<p>كل يوم تجربة صغيرة: كتابة، تلخيص، صورة، تنظيم، ثم مراجعة.</p>
+<button onclick="openArticle('أول أسبوع','خصص 15 دقيقة يوميًا لتجربة مهمة حقيقية من حياتك. اكتب ما نجح وما لم ينجح، وطور طريقة طلبك في اليوم التالي.')">اقرأ الدرس ←</button>
+</div>
+</article>
+
+</div>
+</div>
+</section>
+
+<section class="container" id="course">
+<div class="course">
+
+<div>
+<span class="eyebrow" style="background:rgba(255,255,255,.13);color:#fff">
+🎁 كورس مجانى بالكامل من AiFrahat
+</span>
+
+<h2>استخدم الذكاء الصناعى في حياتك وشغلك</h2>
+
+<p>
+شرح أونلاين من الموبايل أو اللاب، خطوة بخطوة، عشان تطور نفسك، تزود إنتاجيتك ووعيك، وتوفر وقتك وفلوسك باستخدام الذكاء الصناعى بطريقة عملية وبسيطة.
+</p>
+
+<a class="primary" href="https://chat.whatsapp.com/DVXV5k7dQDDE6h3t9NNMXn?s=cl&p=a&ilr=1" target="_blank" rel="noopener">
+انضم للكورس مجانًا ←
+</a>
+</div>
+
+<div class="course-badge">
+🎓<br>
+<small>تعلم • طبّق • طوّر</small>
+</div>
+
+</div>
+</section>
+
+<section class="section">
+<div class="container" style="text-align:center">
+
+<h2>إيه اللي تقدر تعمله بالذكاء الصناعى؟</h2>
+
+<p class="lead" style="margin:12px auto 24px">
+من أول CV وصورة ورسالة، لحد تنظيم شغلك وتعلم مهارة جديدة. اختار مهمة، وابدأ بخطوة صغيرة.
+</p>
+
+<a class="primary" href="#discover">
+اكتشف الاستخدامات ←
+</a>
+
+</div>
+</section>
+
+</main>
+
+<footer class="footer">
+<div class="container">
+
+<div class="footer-grid">
+
+<div>
+<div class="logo">
+<b>Ai</b>Frahat.com
+<small style="color:#aebbd8">الذكاء الصناعى ببساطة</small>
+</div>
+
+<p>
+محتوى عملي وأدوات مجانية ودروس قصيرة تساعدك تستخدم الذكاء الصناعى في حياتك وشغلك ببساطة.
+</p>
+</div>
+
+<div>
+<h3>AiFrahat</h3>
+<a href="#discover">اكتشف</a><br>
+<a href="#learn">تعلّم</a><br>
+<a href="#tools">الأدوات</a>
+</div>
+
+<div>
+<h3>ابدأ</h3>
+<a href="#articles">المقالات</a><br>
+<a href="#course">الكورس المجانى</a><br>
+<a href="https://chat.whatsapp.com/DVXV5k7dQDDE6h3t9NNMXn?s=cl&p=a&ilr=1" target="_blank" rel="noopener">
+مجموعة واتساب
+</a>
+</div>
+
+</div>
+
+<div class="copyright">
+© 2026 AiFrahat.com — الذكاء الصناعى ببساطة.
+</div>
+
+</div>
+</footer>
+
+<div class="modal" id="articleModal" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+
+<div class="modal-card">
+
+<button class="modal-close" onclick="closeArticle()" aria-label="إغلاق">
+×
+</button>
+
+<h2 id="modalTitle"></h2>
+
+<p id="modalText"></p>
+
+<div class="mini">
+💡 <strong>نصيحة AiFrahat:</strong>
+ابدأ بتجربة صغيرة، راجع النتيجة، وبعدها طوّر طلبك خطوة بخطوة.
+</div>
+
+<br>
+
+<a class="primary" href="#course" onclick="closeArticle()">
+عايز تتعلم أكتر؟ ←
+</a>
+
+</div>
+</div>
+
+<div class="toast" id="toast"></div>
+
+<script>
+
+const menu=document.getElementById('mobileMenu');
+
+document.getElementById('hamb').onclick=()=>{
+menu.classList.toggle('open')
+};
+
+menu.querySelectorAll('a').forEach(a=>{
+a.onclick=()=>menu.classList.remove('open')
+});
+
+const toast=document.getElementById('toast');
+
+function showToast(t){
+toast.textContent=t;
+toast.classList.add('show');
+setTimeout(()=>toast.classList.remove('show'),2400)
+}
+
+function filter(q){
+q=(q||'').trim().toLowerCase();
+
+let n=0;
+
+document.querySelectorAll('.article').forEach(c=>{
+let ok=!q||c.dataset.key.toLowerCase().includes(q)||c.innerText.toLowerCase().includes(q);
+
+c.classList.toggle('hidden',!ok);
+
+if(ok)n++
+});
+
+document.getElementById('articles').scrollIntoView({
+behavior:'smooth'
+});
+
+showToast(
+n
+?`لقينا ${n} نتيجة مناسبة 👌`
+:'ملقيناش نتيجة مطابقة، جرّب كلمة أبسط.'
+);
+}
+
+document.getElementById('searchBtn').onclick=()=>{
+filter(document.getElementById('search').value)
+};
+
+document.getElementById('search').addEventListener('keydown',e=>{
+if(e.key==='Enter')filter(e.target.value)
+});
+
+document.querySelectorAll('[data-q]').forEach(b=>{
+b.onclick=()=>{
+document.getElementById('search').value=b.dataset.q;
+filter(b.dataset.q)
+}
+});
+
+function openArticle(title,text){
+document.getElementById('modalTitle').textContent=title;
+document.getElementById('modalText').textContent=text;
+document.getElementById('articleModal').classList.add('open')
+}
+
+function closeArticle(){
+document.getElementById('articleModal').classList.remove('open')
+}
+
+document.getElementById('articleModal').addEventListener('click',e=>{
+if(e.target.id==='articleModal')closeArticle()
+});
+
+document.addEventListener('keydown',e=>{
+if(e.key==='Escape')closeArticle()
+});
+
+const savedTheme=localStorage.getItem('aifrahat-theme');
+
+if(savedTheme==='dark')
+document.body.classList.add('dark');
+
+document.getElementById('theme').onclick=()=>{
+document.body.classList.toggle('dark');
+
+localStorage.setItem(
+'aifrahat-theme',
+document.body.classList.contains('dark')
+?'dark'
+:'light'
+)
+};
+
+</script>
+
+</body>
+</html>
