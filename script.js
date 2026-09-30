@@ -84,8 +84,9 @@
     });
 
     const search = document.querySelector("[data-dictionary-search]");
-    if (search && search.value.trim()) updateDictionary(search.value);
+    if (search) updateDictionary(search.value);
     if (persist) safeStorage("set", "aifrahat-language", currentLanguage);
+    document.dispatchEvent(new CustomEvent("languagechange", { detail: currentLanguage }));
   }
 
   function setTheme(theme, persist = true) {
@@ -112,10 +113,14 @@
 
   function updateDictionary(rawQuery) {
     const query = rawQuery.toLowerCase().trim();
-    const key = Object.keys(dictionary).find((entry) => query.includes(entry)) || "rag";
-    const item = dictionary[key];
+    const key = query ? Object.keys(dictionary).find((entry) => query.includes(entry)) : "rag";
     const result = document.querySelector("[data-dictionary-result]");
     if (!result) return;
+    if (!key) {
+      result.innerHTML = currentLanguage === "ar" ? "<h4>غير موجود في المعاينة المحلية</h4><p>جرّب RAG أو API أو Agent أو Embedding. القاموس الكامل متاح على iMHOTiP.</p>" : "<h4>Not in this local preview</h4><p>Try RAG, API, Agent, or Embedding. The full dictionary is available on iMHOTiP.</p>";
+      return;
+    }
+    const item = dictionary[key];
 
     const title = currentLanguage === "ar" ? item.arTitle : item.enTitle;
     const body = currentLanguage === "ar" ? item.arBody : item.enBody;
@@ -192,9 +197,20 @@
 
   function initLab() {
     const tabs = document.querySelectorAll("[data-lab-tab]");
-    tabs.forEach((tab) => {
+    tabs.forEach((tab, index) => {
+      tab.tabIndex = index === 0 ? 0 : -1;
+      tab.addEventListener("keydown", (event) => {
+        if (!["ArrowLeft", "ArrowRight", "Home", "End"].includes(event.key)) return;
+        event.preventDefault();
+        const next = event.key === "Home" ? 0 : event.key === "End" ? tabs.length - 1 : (index + (event.key === "ArrowRight" ? 1 : -1) + tabs.length) % tabs.length;
+        tabs[next].click();
+        tabs[next].focus();
+      });
       tab.addEventListener("click", () => {
-        tabs.forEach((item) => item.setAttribute("aria-selected", String(item === tab)));
+        tabs.forEach((item) => {
+          item.setAttribute("aria-selected", String(item === tab));
+          item.tabIndex = item === tab ? 0 : -1;
+        });
         document.querySelectorAll("[data-lab-panel]").forEach((panel) => {
           panel.classList.toggle("is-active", panel.dataset.labPanel === tab.dataset.labTab);
         });
@@ -262,6 +278,10 @@
 
     document.querySelectorAll("[data-open-command]").forEach((button) => button.addEventListener("click", open));
     document.addEventListener("keydown", (event) => {
+      if (event.key === "Escape" && dialog.open) {
+        event.preventDefault();
+        dialog.close();
+      }
       if ((event.ctrlKey || event.metaKey) && event.key.toLowerCase() === "k") {
         event.preventDefault();
         open();
@@ -271,9 +291,19 @@
     input.addEventListener("input", () => {
       const query = input.value.toLowerCase().trim();
       buttons.forEach((button) => {
-        button.hidden = !button.textContent.toLowerCase().includes(query);
+        const label = button.querySelector("[data-ar][data-en]");
+        const haystack = `${button.textContent} ${label?.dataset.ar || ""} ${label?.dataset.en || ""}`.toLowerCase();
+        button.hidden = !haystack.includes(query);
       });
     });
+
+    input.addEventListener("keydown", (event) => {
+      if (event.key === "Enter") {
+        event.preventDefault();
+        buttons.find((button) => !button.hidden)?.click();
+      }
+    });
+    document.querySelector("[data-close-command]")?.addEventListener("click", () => dialog.close());
 
     dialog.addEventListener("click", (event) => {
       if (event.target === dialog) dialog.close();
@@ -372,124 +402,6 @@
     });
   }
 
-  function initNetwork() {
-    const canvas = document.querySelector("[data-network]");
-    if (!canvas) return;
-    const context = canvas.getContext("2d", { alpha: true });
-    const colors = ["#c8ff36", "#2bc7d8", "#ff6b35", "#ff4f8b", "#ffffff"];
-    const labels = ["RAG", "EVAL", "AGENT", "LLM", "HCI", "DATA", "TOOLS", "ALIGN"];
-    const nodes = [];
-    const pointer = { x: -1000, y: -1000, active: false };
-    let width = 0;
-    let height = 0;
-    let frame = 0;
-    let running = true;
-
-    function seeded(index) {
-      const value = Math.sin(index * 999.91) * 43758.5453;
-      return value - Math.floor(value);
-    }
-
-    function resize() {
-      const rect = canvas.getBoundingClientRect();
-      const dpr = Math.min(window.devicePixelRatio || 1, 2);
-      width = rect.width;
-      height = rect.height;
-      canvas.width = Math.max(1, Math.floor(width * dpr));
-      canvas.height = Math.max(1, Math.floor(height * dpr));
-      context.setTransform(dpr, 0, 0, dpr, 0, 0);
-      nodes.length = 0;
-      const count = width < 700 ? 24 : 42;
-      for (let index = 0; index < count; index += 1) {
-        nodes.push({
-          x: seeded(index + 1) * width,
-          y: seeded(index + 101) * height,
-          vx: (seeded(index + 201) - 0.5) * 0.22,
-          vy: (seeded(index + 301) - 0.5) * 0.22,
-          r: 1.5 + seeded(index + 401) * 2.2,
-          color: colors[index % colors.length],
-          label: index % 6 === 0 ? labels[(index / 6) % labels.length] : ""
-        });
-      }
-      draw();
-    }
-
-    function draw() {
-      context.clearRect(0, 0, width, height);
-      const connectionDistance = width < 700 ? 112 : 154;
-
-      for (let first = 0; first < nodes.length; first += 1) {
-        const node = nodes[first];
-        for (let second = first + 1; second < nodes.length; second += 1) {
-          const other = nodes[second];
-          const dx = node.x - other.x;
-          const dy = node.y - other.y;
-          const distance = Math.hypot(dx, dy);
-          if (distance < connectionDistance) {
-            context.strokeStyle = `rgba(130, 146, 158, ${0.24 * (1 - distance / connectionDistance)})`;
-            context.lineWidth = 1;
-            context.beginPath();
-            context.moveTo(node.x, node.y);
-            context.lineTo(other.x, other.y);
-            context.stroke();
-          }
-        }
-
-        context.fillStyle = node.color;
-        context.beginPath();
-        context.arc(node.x, node.y, node.r, 0, Math.PI * 2);
-        context.fill();
-
-        if (node.label) {
-          context.fillStyle = "rgba(255,255,255,.46)";
-          context.font = "9px Cascadia Code, Consolas, monospace";
-          context.fillText(node.label, node.x + 8, node.y - 7);
-        }
-      }
-    }
-
-    function animate() {
-      if (!running) return;
-      frame = requestAnimationFrame(animate);
-      nodes.forEach((node) => {
-        if (pointer.active) {
-          const dx = node.x - pointer.x;
-          const dy = node.y - pointer.y;
-          const distance = Math.max(1, Math.hypot(dx, dy));
-          if (distance < 130) {
-            node.vx += (dx / distance) * 0.018;
-            node.vy += (dy / distance) * 0.018;
-          }
-        }
-        node.vx *= 0.995;
-        node.vy *= 0.995;
-        node.x += node.vx;
-        node.y += node.vy;
-        if (node.x < -10) node.x = width + 10;
-        if (node.x > width + 10) node.x = -10;
-        if (node.y < -10) node.y = height + 10;
-        if (node.y > height + 10) node.y = -10;
-      });
-      draw();
-    }
-
-    canvas.addEventListener("pointermove", (event) => {
-      const rect = canvas.getBoundingClientRect();
-      pointer.x = event.clientX - rect.left;
-      pointer.y = event.clientY - rect.top;
-      pointer.active = true;
-    });
-    canvas.addEventListener("pointerleave", () => { pointer.active = false; });
-    document.addEventListener("visibilitychange", () => {
-      running = !document.hidden;
-      if (running && !reduceMotion) animate();
-      if (!running) cancelAnimationFrame(frame);
-    });
-
-    const observer = new ResizeObserver(resize);
-    observer.observe(canvas);
-    if (!reduceMotion) animate();
-  }
 
   document.querySelector("[data-year]").textContent = new Date().getFullYear();
   setLanguage(safeStorage("get", "aifrahat-language") || "ar", false);
@@ -500,5 +412,4 @@
   initCommandPalette();
   initRevealAndCounters();
   initClipboard();
-  initNetwork();
 })();

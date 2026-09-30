@@ -1,16 +1,16 @@
 {
-  "name": "AiFRAHAT — AI Research & Open Source",
+  "name": "AiFRAHAT | From Intelligence to Matter",
   "short_name": "AiFRAHAT",
   "description": "Open AI research, interactive experiments, and tools by Ahmed Frahat.",
   "start_url": "/",
   "display": "standalone",
-  "background_color": "#0a0c0f",
-  "theme_color": "#0a0c0f",
+  "background_color": "#0b0c0e",
+  "theme_color": "#0b0c0e",
   "icons": [
     {
-      "src": "favicon.svg",
-      "sizes": "any",
-      "type": "image/svg+xml",
+      "src": "assets/icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png",
       "purpose": "any"
     }
   ]

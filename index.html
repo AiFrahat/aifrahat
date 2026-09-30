@@ -3,33 +3,38 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-  <meta name="theme-color" content="#0a0c0f">
+  <meta name="theme-color" content="#0b0c0e">
   <meta name="description" content="مختبر أحمد فرحات المفتوح لأبحاث الذكاء الاصطناعي، التجارب التفاعلية، والأدوات التي تجعل المعرفة التقنية أقرب للناس.">
   <meta name="robots" content="index,follow,max-image-preview:large">
   <link rel="canonical" href="https://aifrahat.com/">
-  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="icon" href="assets/icon-64.png" type="image/png" sizes="64x64">
+  <link rel="apple-touch-icon" href="assets/icon-192.png">
   <link rel="manifest" href="site.webmanifest">
   <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="atelier.css">
+  <script type="importmap">{"imports":{"three":"./vendor/three.module.min.js"}}</script>
 
   <meta property="og:type" content="website">
   <meta property="og:title" content="AiFRAHAT — AI Research & Open Source">
   <meta property="og:description" content="أبحاث، أدوات، وتجارب ذكاء اصطناعي مفتوحة المصدر من أحمد فرحات.">
   <meta property="og:url" content="https://aifrahat.com/">
-  <meta property="og:image" content="https://aifrahat.com/assets/portrait.png">
+  <meta property="og:image" content="https://aifrahat.com/assets/crown-orbit.png">
   <meta name="twitter:card" content="summary_large_image">
 
-  <title>AiFRAHAT — AI Research & Open Source</title>
+  <title>AiFRAHAT | From Intelligence to Matter</title>
 </head>
 <body id="top">
   <a class="skip-link" href="#main" data-ar="انتقل للمحتوى" data-en="Skip to content">انتقل للمحتوى</a>
 
   <header class="site-header">
     <a class="brand" href="#top" aria-label="AiFRAHAT home">
-      <span class="brand-mark" aria-hidden="true">AF</span>
+      <img class="brand-emblem" src="assets/icon-192.png" alt="" width="42" height="42">
       <span class="brand-name">AiFRAHAT<span class="brand-dot">.</span></span>
     </a>
 
     <nav class="desktop-nav" aria-label="Primary navigation">
+      <a href="#frontiers" data-ar="الاهتمامات" data-en="Frontiers">الاهتمامات</a>
+      <a href="#studio" data-ar="استوديو البناء" data-en="Build studio">استوديو البناء</a>
       <a href="#work" data-ar="العمل" data-en="Work">العمل</a>
       <a href="#lab" data-ar="المعمل" data-en="Lab">المعمل</a>
       <a href="#method" data-ar="المنهج" data-en="Method">المنهج</a>
@@ -53,6 +58,8 @@
     </div>
 
     <nav class="mobile-nav" data-mobile-nav aria-label="Mobile navigation">
+      <a href="#frontiers" data-ar="الاهتمامات" data-en="Frontiers">الاهتمامات</a>
+      <a href="#studio" data-ar="استوديو البناء" data-en="Build studio">استوديو البناء</a>
       <a href="#work" data-ar="العمل" data-en="Work">العمل</a>
       <a href="#lab" data-ar="المعمل" data-en="Lab">المعمل</a>
       <a href="#method" data-ar="المنهج" data-en="Method">المنهج</a>
@@ -61,55 +68,94 @@
   </header>
 
   <main id="main">
-    <section class="hero" aria-labelledby="hero-title">
-      <canvas class="hero-canvas" data-network aria-hidden="true"></canvas>
-      <div class="hero-grid" aria-hidden="true"></div>
-      <div class="hero-noise" aria-hidden="true"></div>
-
-      <div class="hero-portrait-wrap" aria-hidden="true">
-        <div class="portrait-index">01 / RESEARCHER</div>
-        <img class="hero-portrait" src="assets/portrait.png" alt="" width="1365" height="2048">
+    <section class="observatory" aria-labelledby="hero-title">
+      <div class="observatory-top shell"><span class="edition">AF / EXPERIMENTAL ATELIER</span><span class="edition" data-ar="القاهرة · من الفكرة إلى الأثر" data-en="CAIRO · FROM IDEA TO IMPACT">القاهرة · من الفكرة إلى الأثر</span></div>
+      <div class="hero-object" data-scene="hero" role="group" aria-label="Interactive 3D rover concept">
+        <img class="scene-fallback" src="assets/crown-orbit.webp" alt="AiFRAHAT crowned A emblem" width="768" height="768">
       </div>
-
-      <div class="hero-content shell">
-        <div class="hero-copy reveal">
-          <p class="signal"><span></span><span data-ar="مختبر أبحاث مفتوح · القاهرة" data-en="OPEN RESEARCH LAB · CAIRO">مختبر أبحاث مفتوح · القاهرة</span></p>
-          <h1 id="hero-title">
-            <span data-ar="أحمد فرحات" data-en="Ahmed Frahat">أحمد فرحات</span>
-            <small data-ar="أبحث كيف يفهم الذكاء الاصطناعي، وكيف نفهمه نحن." data-en="I study how AI understands, and how we understand it.">أبحث كيف يفهم الذكاء الاصطناعي، وكيف نفهمه نحن.</small>
-          </h1>
-          <p class="hero-lead" data-ar="باحث ومطوّر مستقل أبني تجارب مفتوحة المصدر عند تقاطع النماذج اللغوية، استرجاع المعرفة، وتجربة الإنسان مع الآلة." data-en="Independent researcher and builder creating open-source experiments at the intersection of language models, knowledge retrieval, and human-computer interaction.">باحث ومطوّر مستقل أبني تجارب مفتوحة المصدر عند تقاطع النماذج اللغوية، استرجاع المعرفة، وتجربة الإنسان مع الآلة.</p>
-          <div class="hero-actions">
-            <a class="button button-acid" href="#work"><span data-ar="استكشف العمل" data-en="Explore the work">استكشف العمل</span><span aria-hidden="true">↙</span></a>
-            <a class="button button-ghost" href="https://github.com/AiFrahat" target="_blank" rel="noopener"><span data-ar="شاهد الكود" data-en="Review the code">شاهد الكود</span><span aria-hidden="true">↗</span></a>
-          </div>
+      <div class="observatory-copy shell"><div class="intro">
+        <p class="eyeline"><span class="status-dot"></span><span  data-ar="أحمد فرحات · باحث وصانع" data-en="AHMED FRAHAT · RESEARCHER & MAKER">أحمد فرحات · باحث وصانع</span></p>
+        <h1 id="hero-title" dir="ltr">AiFRAHAT<span>.</span></h1>
+        <p class="hero-thesis" data-ar="الذكاء يصبح شيئًا تلمسه." data-en="Intelligence. Made tangible.">الذكاء يصبح شيئًا تلمسه.</p>
+        <p class="intro-text" data-ar="أستكشف المسافة بين الفكرة والكود والآلة. ستة مجالات، وفضول واحد: ماذا يمكن أن نبني بعد؟" data-en="Exploring the space between an idea, its code, and the machine it becomes. Six frontiers. One question: what can we build next?">أستكشف المسافة بين الفكرة والكود والآلة. ستة مجالات، وفضول واحد: ماذا يمكن أن نبني بعد؟</p>
+        <div class="intro-actions">
+          <a class="button primary-action" href="#studio"><span  data-ar="حوّل فكرتك إلى نموذج" data-en="Make an idea tangible">حوّل فكرتك إلى نموذج</span><i data-lucide="arrow-up-left" aria-hidden="true"></i></a>
+          <a class="quiet-link" href="#frontiers"><span  data-ar="مساحات الفضول" data-en="Explore the frontiers">مساحات الفضول</span><i data-lucide="arrow-down" aria-hidden="true"></i></a>
         </div>
-
-        <div class="hero-side reveal" data-delay="1">
-          <div class="live-readout">
-            <span class="readout-label">NOW EXPLORING</span>
-            <strong data-ar="أنظمة RAG قابلة للتفسير" data-en="Interpretable RAG systems">أنظمة RAG قابلة للتفسير</strong>
-            <span class="readout-meta">CAI / 30.0444° N / 31.2357° E</span>
-          </div>
-          <div class="hero-tags" aria-label="Research interests">
-            <span>LLM EVALS</span>
-            <span>RAG</span>
-            <span>AGENTS</span>
-            <span>HCI</span>
-          </div>
-        </div>
+        <div class="maker-signature"><img src="assets/portrait-small.webp" alt="Ahmed Frahat" width="40" height="40"><span>AHMED FRAHAT <small  data-ar="أتعلم. أصمّم. أبني. أشارك." data-en="Learn. Design. Build. Share.">أتعلم. أصمّم. أبني. أشارك.</small></span></div>
+      </div></div>
+      <div class="object-caption"><span class="object-id">AF / 01</span><span data-hero-caption data-ar="مستكشف مستقل · نموذج تصوري" data-en="AUTONOMOUS EXPLORER · CONCEPT">مستكشف مستقل · نموذج تصوري</span></div>
+      <div class="scene-toolbar" role="group" aria-label="3D view controls">
+        <button class="icon-button" type="button" data-hero-pause title="Pause / resume motion" aria-label="Pause motion" aria-pressed="false"><i data-lucide="pause"></i></button>
+        <button class="icon-button" type="button" data-hero-reset title="Reset view" aria-label="Reset view"><i data-lucide="rotate-ccw"></i></button>
+        <label class="assembly-control" title="Exploded view"><i data-lucide="layers-3" aria-hidden="true"></i><input type="range" min="0" max="100" value="25" data-hero-explode aria-label="Exploded view"></label>
       </div>
-
-      <div class="hero-footer">
-        <div class="status-item"><span class="status-dot"></span><span data-ar="متاح للتعاون البحثي" data-en="Open to research collaborations">متاح للتعاون البحثي</span></div>
-        <div class="hero-coordinates">SCROLL TO INSPECT <span aria-hidden="true">↓</span></div>
+      <div class="frontier-rail" aria-label="Research frontiers">
+        <button type="button" data-frontier="physical" aria-pressed="true"><span>01</span><i data-lucide="bot" aria-hidden="true"></i><b>Physical AI</b></button>
+        <button type="button" data-frontier="coding" aria-pressed="false"><span>02</span><i data-lucide="code-2" aria-hidden="true"></i><b>Vibe Coding</b></button>
+        <button type="button" data-frontier="hardware" aria-pressed="false"><span>03</span><i data-lucide="cpu" aria-hidden="true"></i><b>Vibe Hardware</b></button>
+        <button type="button" data-frontier="fabrication" aria-pressed="false"><span>04</span><i data-lucide="box" aria-hidden="true"></i><b>Vibe Fabrication</b></button>
+        <button type="button" data-frontier="product" aria-pressed="false"><span>05</span><i data-lucide="sparkles" aria-hidden="true"></i><b>Prompt-to-Product</b></button>
+        <button type="button" data-frontier="agentic" aria-pressed="false"><span>06</span><i data-lucide="workflow" aria-hidden="true"></i><b>Agentic Engineering</b></button>
       </div>
     </section>
 
-    <section class="signal-strip" aria-label="Research summary">
-      <div class="signal-track">
-        <span>OPEN SOURCE FIRST</span><i></i><span>ARABIC AI</span><i></i><span>REPRODUCIBLE SYSTEMS</span><i></i><span>HUMAN-CENTERED RESEARCH</span><i></i>
-        <span>OPEN SOURCE FIRST</span><i></i><span>ARABIC AI</span><i></i><span>REPRODUCIBLE SYSTEMS</span><i></i><span>HUMAN-CENTERED RESEARCH</span><i></i>
+    <section class="frontiers-section section-pad" id="frontiers">
+      <div class="shell">
+        <header class="section-header">
+          <div><p class="section-kicker">01 / THE FRONTIERS</p><h2  data-ar="الحدود بين المجالات، هي البداية." data-en="The boundaries are the beginning.">الحدود بين المجالات، هي البداية.</h2></div>
+          <p  data-ar="اهتمامات بحثية ومسارات تجريبية أستكشفها. من ذكاء يفهم، إلى أدوات تبني، إلى أشياء تعيش خارج الشاشة." data-en="Research interests and experimental directions. From intelligence that understands, to tools that build, to things that exist beyond a screen.">اهتمامات بحثية ومسارات تجريبية أستكشفها. من ذكاء يفهم، إلى أدوات تبني، إلى أشياء تعيش خارج الشاشة.</p>
+        </header>
+        <div class="frontier-list">
+          <details open><summary><span class="frontier-number">01</span><i data-lucide="bot" aria-hidden="true"></i><h3>Physical AI</h3><i class="detail-plus" data-lucide="plus" aria-hidden="true"></i></summary><div class="frontier-detail"><p  data-ar="الذكاء الذي يلتقي بالعالم الحقيقي: إدراك، حساسات، وحركة. أستكشف كيف نختبر قرار الآلة قبل أن يتحول إلى فعل." data-en="Intelligence meets the physical world: perception, sensors, and motion. Exploring how to test a machine's decision before it becomes an action.">الذكاء الذي يلتقي بالعالم الحقيقي: إدراك، حساسات، وحركة. أستكشف كيف نختبر قرار الآلة قبل أن يتحول إلى فعل.</p><span>PERCEPTION / ROBOTICS / SIM-TO-REAL</span></div></details>
+          <details><summary><span class="frontier-number">02</span><i data-lucide="code-2" aria-hidden="true"></i><h3>Vibe Coding</h3><i class="detail-plus" data-lucide="plus" aria-hidden="true"></i></summary><div class="frontier-detail"><p  data-ar="حوار يتحول إلى كود، ثم إلى اختبارات. يهمني تسريع البناء مع الحفاظ على فهم ما نبنيه والقدرة على تغييره." data-en="A conversation becomes code, then tests. Accelerating the build while retaining the ability to understand and change what we make.">حوار يتحول إلى كود، ثم إلى اختبارات. يهمني تسريع البناء مع الحفاظ على فهم ما نبنيه والقدرة على تغييره.</p><span>PROTOTYPING / HUMAN IN THE LOOP / TESTING</span></div></details>
+          <details><summary><span class="frontier-number">03</span><i data-lucide="cpu" aria-hidden="true"></i><h3>Vibe Hardware</h3><i class="detail-plus" data-lucide="plus" aria-hidden="true"></i></summary><div class="frontier-detail"><p  data-ar="ما وراء الشاشة: دوائر وحساسات ومتحكمات. رحلة من التوصيل والقياس إلى نموذج إلكتروني يمكن اختباره." data-en="Beyond the screen: circuits, sensors, and microcontrollers. From wiring and measurement to an electronic prototype we can test.">ما وراء الشاشة: دوائر وحساسات ومتحكمات. رحلة من التوصيل والقياس إلى نموذج إلكتروني يمكن اختباره.</p><span>EMBEDDED SYSTEMS / SENSORS / ELECTRONICS</span></div></details>
+          <details><summary><span class="frontier-number">04</span><i data-lucide="box" aria-hidden="true"></i><h3>Vibe Fabrication</h3><i class="detail-plus" data-lucide="plus" aria-hidden="true"></i></summary><div class="frontier-detail"><p  data-ar="التصميم كمعادلة قابلة للتغيير. نماذج بارامترية، طباعة ثلاثية الأبعاد، واهتمام بالخامة والتفاوتات وحدود التصنيع." data-en="Design as a variable equation. Parametric models, additive manufacturing, materials, tolerances, and fabrication constraints.">التصميم كمعادلة قابلة للتغيير. نماذج بارامترية، طباعة ثلاثية الأبعاد، واهتمام بالخامة والتفاوتات وحدود التصنيع.</p><span>PARAMETRIC DESIGN / ADDITIVE MANUFACTURING</span></div></details>
+          <details><summary><span class="frontier-number">05</span><i data-lucide="sparkles" aria-hidden="true"></i><h3>Prompt-to-Product</h3><i class="detail-plus" data-lucide="plus" aria-hidden="true"></i></summary><div class="frontier-detail"><p  data-ar="من نية مكتوبة إلى مواصفات، ومن نموذج أولي إلى مراجعة. المنتج الجيد يحتاج أسئلة جيدة بقدر ما يحتاج إجابات سريعة." data-en="From written intent to specification, prototype, and review. Good products need thoughtful questions as much as fast answers.">من نية مكتوبة إلى مواصفات، ومن نموذج أولي إلى مراجعة. المنتج الجيد يحتاج أسئلة جيدة بقدر ما يحتاج إجابات سريعة.</p><span>INTENT / SPECIFICATION / PROTOTYPE / VALIDATION</span></div></details>
+          <details><summary><span class="frontier-number">06</span><i data-lucide="workflow" aria-hidden="true"></i><h3>Agentic Engineering</h3><i class="detail-plus" data-lucide="plus" aria-hidden="true"></i></summary><div class="frontier-detail"><p  data-ar="وكلاء بمهام واضحة وحدود معلنة. أدوات وذاكرة وتقييم، مع بقاء الإنسان قادرًا على الفهم والتدخل." data-en="Agents with clear tasks and explicit boundaries. Tools, memory, and evaluation, with people able to understand and intervene.">وكلاء بمهام واضحة وحدود معلنة. أدوات وذاكرة وتقييم، مع بقاء الإنسان قادرًا على الفهم والتدخل.</p><span>ORCHESTRATION / TOOL USE / EVALUATION</span></div></details>
+        </div>
+      </div>
+    </section>
+
+    <section class="product-studio section-pad" id="studio" aria-labelledby="studio-title">
+      <div class="shell">
+        <header class="section-header"><div><p class="section-kicker">02 / PROMPT → FORM</p><h2 id="studio-title" data-ar="الفكرة لك. البداية هنا." data-en="Your idea. Its first form.">الفكرة لك. البداية هنا.</h2></div><p  data-ar="تجربة بارامترية محلية بثلاثة قوالب. نماذج تصورية قابلة للتصدير، وليست استدلالًا بنموذج ذكاء اصطناعي أو تصميمات معتمدة للتصنيع." data-en="A local parametric experiment with three templates. Exportable concept models, not AI inference or manufacturing-certified designs.">تجربة بارامترية محلية بثلاثة قوالب. نماذج تصورية قابلة للتصدير، وليست استدلالًا بنموذج ذكاء اصطناعي أو تصميمات معتمدة للتصنيع.</p></header>
+        <div class="studio-workspace">
+          <div class="studio-inputs">
+            <label class="field-label" for="product-prompt" data-ar="وصف الفكرة" data-en="THE BRIEF">وصف الفكرة</label>
+            <textarea id="product-prompt" maxlength="360" rows="3" placeholder="مستكشف أحمر صغير بعرض 180 مم" data-placeholder-ar="مستكشف أحمر صغير بعرض 180 مم" data-placeholder-en="A small red rover, 180 mm wide"></textarea>
+            <div class="preset-switch" role="group" aria-label="Product template">
+              <button type="button" data-preset="rover" aria-pressed="true"><i data-lucide="bot"></i><span  data-ar="مستكشف" data-en="Rover">مستكشف</span></button>
+              <button type="button" data-preset="sensor" aria-pressed="false"><i data-lucide="radio"></i><span  data-ar="حساس" data-en="Sensor">حساس</span></button>
+              <button type="button" data-preset="lamp" aria-pressed="false"><i data-lucide="lamp-desk"></i><span  data-ar="مصباح" data-en="Lamp">مصباح</span></button>
+            </div>
+            <button type="button" class="button primary-action form-button" data-build><span  data-ar="شكّل الفكرة" data-en="Form the idea">شكّل الفكرة</span><i data-lucide="arrow-up-left"></i></button>
+            <p class="build-feedback" data-build-feedback role="status"></p>
+            <div class="studio-controls">
+              <label class="dimension-label"><span  data-ar="العرض" data-en="Width">العرض</span><output data-width-output>180 mm</output><input type="range" min="100" max="260" step="10" value="180" data-width aria-label="Product width"></label>
+              <div class="finish-row"><span  data-ar="الخامة" data-en="Finish">الخامة</span><div class="swatches" role="group" aria-label="Material finish">
+                <button type="button" data-finish="ruby" aria-pressed="true" aria-label="Ruby finish" title="Ruby ceramic"></button>
+                <button type="button" data-finish="silver" aria-pressed="false" aria-label="Silver finish" title="Brushed titanium"></button>
+                <button type="button" data-finish="mint" aria-pressed="false" aria-label="Mint finish" title="Mineral green"></button>
+              </div></div>
+              <label class="dimension-label"><span  data-ar="تفكيك الطبقات" data-en="Exploded view">تفكيك الطبقات</span><output data-explode-output>25%</output><input type="range" min="0" max="100" value="25" data-explode aria-label="Assembly separation"></label>
+              <label class="wire-toggle"><input type="checkbox" data-wireframe><span  data-ar="البنية الشبكية" data-en="Wireframe">البنية الشبكية</span></label>
+            </div>
+            <div class="export-actions">
+              <button type="button" data-export="stl" title="Download solid concept base (millimeters)"><i data-lucide="download"></i>STL</button>
+              <button type="button" data-export="json" title="Download design parameters"><i data-lucide="file-json"></i>JSON</button>
+              <button type="button" data-export="brief" title="Download design brief"><i data-lucide="file-text"></i>BRIEF</button>
+            </div>
+          </div>
+          <div class="studio-viewport" data-scene="studio" role="group" aria-label="Parametric product preview">
+            <img class="scene-fallback" src="assets/crown-orbit.webp" alt="AiFRAHAT concept studio" width="768" height="768">
+            <div class="viewport-header"><span data-product-label>AF / ROVER-01</span><span class="preview-badge">CONCEPT MODEL</span></div>
+            <div class="viewport-footer"><span data-mesh-status>3D</span><button type="button" class="icon-button" data-studio-reset aria-label="Reset product view" title="Reset view"><i data-lucide="rotate-ccw"></i></button></div>
+          </div>
+        </div>
+        <ol class="build-pipeline" aria-label="Product workflow">
+          <li><span>01</span><b  data-ar="النية" data-en="Intent">النية</b></li><li><span>02</span><b  data-ar="المواصفات" data-en="Specification">المواصفات</b></li><li><span>03</span><b  data-ar="الهندسة" data-en="Geometry">الهندسة</b></li><li><span>04</span><b  data-ar="المراجعة" data-en="Review">المراجعة</b></li>
+        </ol>
       </div>
     </section>
 
@@ -117,7 +163,7 @@
       <div class="shell">
         <header class="section-header reveal">
           <div>
-            <p class="section-kicker">01 / SELECTED WORK</p>
+            <p class="section-kicker">03 / SELECTED WORK</p>
             <h2 data-ar="أنظمة تعمل، لا عروض فارغة." data-en="Systems that work, not empty demos.">أنظمة تعمل، لا عروض فارغة.</h2>
           </div>
           <p data-ar="كل مشروع هنا قابل للفحص والتجربة. الكود، القرارات، والقيود جزء من القصة." data-en="Every project here can be inspected and tested. Code, decisions, and limitations are part of the story.">كل مشروع هنا قابل للفحص والتجربة. الكود، القرارات، والقيود جزء من القصة.</p>
@@ -133,8 +179,8 @@
             <p class="project-subtitle" data-ar="قاموس التكنولوجيا الذي يترجم التعقيد، لا الكلمات فقط." data-en="A technology dictionary that translates complexity, not just words.">قاموس التكنولوجيا الذي يترجم التعقيد، لا الكلمات فقط.</p>
             <p data-ar="تجربة عربية وإنجليزية تضم 500 مفهوم تقني عبر 11 مجالًا. بحث فوري، روابط مفاهيمية، وبنية بيانات تعمل بالكامل داخل المتصفح." data-en="An Arabic-English experience covering 500 technology concepts across 11 domains, with instant search, conceptual links, and a browser-native data architecture.">تجربة عربية وإنجليزية تضم 500 مفهوم تقني عبر 11 مجالًا. بحث فوري، روابط مفاهيمية، وبنية بيانات تعمل بالكامل داخل المتصفح.</p>
             <div class="project-stats">
-              <div><strong data-counter="500">0</strong><span data-ar="مفهوم موثّق" data-en="documented concepts">مفهوم موثّق</span></div>
-              <div><strong data-counter="11">0</strong><span data-ar="مجالًا تقنيًا" data-en="technical domains">مجالًا تقنيًا</span></div>
+              <div><strong data-counter="500">500</strong><span data-ar="مفهوم موثّق" data-en="documented concepts">مفهوم موثّق</span></div>
+              <div><strong data-counter="11">11</strong><span data-ar="مجالًا تقنيًا" data-en="technical domains">مجالًا تقنيًا</span></div>
               <div><strong>AR / EN</strong><span data-ar="تجربة ثنائية" data-en="bilingual experience">تجربة ثنائية</span></div>
             </div>
             <div class="project-links">
@@ -160,13 +206,13 @@
               <p data-ar="أسلوب يبحث في مصادر محددة ثم يقدّم المعلومات للنموذج قبل بناء الإجابة." data-en="A method that retrieves information from selected sources before the model builds its answer.">أسلوب يبحث في مصادر محددة ثم يقدّم المعلومات للنموذج قبل بناء الإجابة.</p>
               <div class="related-row"><span>EMBEDDING</span><span>VECTOR DB</span><span>LLM</span></div>
             </div>
-            <div class="demo-index"><span>RESULT 01</span><span>0.018 SEC</span></div>
+            <div class="demo-index"><span>LOCAL PREVIEW</span><span>4 SAMPLE TERMS</span></div>
           </div>
         </div>
 
         <div class="project-grid">
           <article class="project-card reveal">
-            <div class="project-card-top"><span>02</span><span class="work-in-progress">IN DEVELOPMENT</span></div>
+            <div class="project-card-top"><span>02</span><span class="work-in-progress">CONCEPT STUDY</span></div>
             <div class="card-visual trace-visual" aria-hidden="true">
               <div><b>QUERY</b><i></i><b>RETRIEVE</b><i></i><b>RERANK</b></div>
               <div><span>0.12</span><span>0.88</span><span>0.76</span><span>0.41</span></div>
@@ -195,7 +241,7 @@
       <div class="shell">
         <header class="section-header section-header-light reveal">
           <div>
-            <p class="section-kicker">02 / LIVE LAB</p>
+            <p class="section-kicker">04 / LIVE LAB</p>
             <h2 data-ar="غيّر الفرضية. شاهد النظام يتغيّر." data-en="Change the hypothesis. Watch the system change.">غيّر الفرضية. شاهد النظام يتغيّر.</h2>
           </div>
           <p data-ar="هذه محاكاة تعليمية داخل المتصفح وليست نتائج benchmark منشورة." data-en="This is an educational browser simulation, not a published benchmark.">هذه محاكاة تعليمية داخل المتصفح وليست نتائج benchmark منشورة.</p>
@@ -274,7 +320,7 @@
       <div class="shell">
         <header class="section-header reveal">
           <div>
-            <p class="section-kicker">03 / METHOD</p>
+            <p class="section-kicker">05 / METHOD</p>
             <h2 data-ar="البحث الجيد يترك أثرًا يمكن تتبّعه." data-en="Good research leaves a trace you can follow.">البحث الجيد يترك أثرًا يمكن تتبّعه.</h2>
           </div>
           <p data-ar="أتعامل مع كل فكرة كمنظومة: سؤال واضح، تجربة قابلة لإعادة التشغيل، وحدود معلنة." data-en="I treat each idea as a system: a clear question, a reproducible experiment, and explicit limitations.">أتعامل مع كل فكرة كمنظومة: سؤال واضح، تجربة قابلة لإعادة التشغيل، وحدود معلنة.</p>
@@ -315,7 +361,7 @@
           </div>
           <div class="ledger-table">
             <div><span>RUNTIME</span><strong>VANILLA JS</strong><em>ZERO BUILD</em></div>
-            <div><span>GRAPHICS</span><strong>CANVAS 2D</strong><em>60 FPS TARGET</em></div>
+            <div><span>GRAPHICS</span><strong>THREE.JS</strong><em>WEBGL / PARAMETRIC</em></div>
             <div><span>ACCESS</span><strong>AR / EN</strong><em>RTL + LTR</em></div>
             <div><span>LICENSE</span><strong>MIT</strong><em>OPEN SOURCE</em></div>
           </div>
@@ -327,7 +373,7 @@
     <section class="about-section" id="about">
       <div class="about-grid shell">
         <div class="about-statement reveal">
-          <p class="section-kicker">04 / ABOUT</p>
+          <p class="section-kicker">06 / ABOUT</p>
           <h2 data-ar="أؤمن أن التقنية تصبح أقوى عندما تصبح مفهومة." data-en="I believe technology gets stronger when it becomes understandable.">أؤمن أن التقنية تصبح أقوى عندما تصبح مفهومة.</h2>
         </div>
         <div class="about-copy reveal" data-delay="1">
@@ -357,9 +403,11 @@
     <div class="command-head">
       <span aria-hidden="true">⌕</span>
       <input type="search" data-command-input placeholder="اكتب أمرًا أو اسم قسم..." data-placeholder-ar="اكتب أمرًا أو اسم قسم..." data-placeholder-en="Type a command or section..." autocomplete="off">
-      <kbd>ESC</kbd>
+      <button type="button" class="icon-button" data-close-command aria-label="Close command palette" title="Close"><i data-lucide="x"></i></button>
     </div>
     <div class="command-list" data-command-list>
+      <button type="button" data-command-target="#studio"><span data-ar="افتح استوديو البناء" data-en="Open build studio">افتح استوديو البناء</span><em>3D</em></button>
+      <button type="button" data-command-target="#frontiers"><span data-ar="استكشف الاهتمامات" data-en="Explore research frontiers">استكشف الاهتمامات</span><em>06</em></button>
       <button type="button" data-command-target="#work"><span data-ar="اذهب إلى الأعمال" data-en="Go to selected work">اذهب إلى الأعمال</span><em>01</em></button>
       <button type="button" data-command-target="#lab"><span data-ar="افتح المعمل التفاعلي" data-en="Open the interactive lab">افتح المعمل التفاعلي</span><em>02</em></button>
       <button type="button" data-command-target="#method"><span data-ar="راجع منهج البحث" data-en="Review the research method">راجع منهج البحث</span><em>03</em></button>
@@ -369,6 +417,8 @@
   </dialog>
 
   <div class="toast" data-toast role="status" aria-live="polite"></div>
+  <script src="vendor/lucide.min.js" defer></script>
   <script src="script.js" defer></script>
+  <script type="module" src="studio.js"></script>
 </body>
 </html>
