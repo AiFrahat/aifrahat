@@ -54,7 +54,7 @@ export function mountScene(container, initial, { hero = false } = {}) {
   key.shadow.camera.left = -5; key.shadow.camera.right = 5;
   key.shadow.camera.top = 7; key.shadow.camera.bottom = -4;
   key.shadow.normalBias = .035; scene.add(key);
-  const rim = new THREE.DirectionalLight(0x42e8d8, 3);
+  const rim = new THREE.DirectionalLight(0x42e8d8, 2.2);
   rim.position.set(-4, 3, -4); scene.add(rim);
   const ground = new THREE.Mesh(new THREE.PlaneGeometry(24, 24), new THREE.ShadowMaterial({ opacity: .32 }));
   ground.rotation.x = -Math.PI / 2; ground.position.y = .015; ground.receiveShadow = true; scene.add(ground);

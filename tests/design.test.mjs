@@ -1,9 +1,28 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
 import { Box3, Vector3 } from 'three';
-import { DEFAULT_DESIGN, normalizeDesign, parseBrief, specification, briefMarkdown } from '../design-state.mjs';
+import { DEFAULT_DESIGN, FINISHES, normalizeDesign, parseBrief, specification, briefMarkdown } from '../design-state.mjs';
 import { exportBase, createProduct } from '../product-model.js';
 import { STLExporter } from '../vendor/STLExporter.js';
+
+test('the signature rover defaults to ruby without overwriting saved finishes', () => {
+  assert.equal(DEFAULT_DESIGN.finish, 'ruby');
+  assert.equal(normalizeDesign({}).finish, 'ruby');
+  assert.equal(normalizeDesign({ ...DEFAULT_DESIGN, finish: 'turquoise' }).finish, 'turquoise');
+});
+
+test('the clear-coated body keeps its finish and updates correctly', () => {
+  const product = createProduct(DEFAULT_DESIGN);
+  let body;
+  product.root.traverse(mesh => { if (mesh.material?.isMeshPhysicalMaterial) body = mesh.material; });
+  assert.ok(body);
+  assert.equal(body.color.getHex(), FINISHES.ruby);
+  assert.equal(body.clearcoat, .85);
+  product.update({ ...DEFAULT_DESIGN, finish: 'turquoise', wireframe: true });
+  assert.equal(body.color.getHex(), FINISHES.turquoise);
+  assert.equal(body.wireframe, true);
+  product.dispose();
+});
 
 test('English brief resolves template, finish and millimeter width', () => {
   const { design, matched } = parseBrief('A green sensor, 220 mm wide');

@@ -17,7 +17,8 @@ button, a, input, textarea, summary { touch-action: manipulation; }
 button:focus-visible, a:focus-visible, summary:focus-visible, input:focus-visible, textarea:focus-visible { outline: 2px solid #76c8db; outline-offset: 5px; }
 .lucide { width: 19px; height: 19px; stroke-width: 1.6; flex: 0 0 auto; }
 .site-header { grid-template-columns: auto 1fr auto; background: rgba(11,12,14,.93); height: 72px; }
-.brand-emblem { object-fit: contain; width: 42px; height: 42px; }
+.brand-emblem { object-fit: contain; width: 42px; height: 42px; border-radius: 6px; border: 1px solid #263833; transition: border-color .2s; }
+.brand:hover .brand-emblem { border-color: var(--cyan); }
 .brand-dot { color: var(--cyan); }
 .desktop-nav { gap: 0; }
 .desktop-nav a { padding-inline: 11px; font-weight: 500; font-size: 12px; }

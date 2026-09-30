@@ -9,7 +9,7 @@ An open-source, bilingual portfolio for Ahmed Frahat. Live at [aifrahat.com](htt
 - AI Arena: local Stockfish 19 Lite chess with legal moves, promotion, hints, undo, board flip, PGN export and live search metrics. The engine downloads only when a match starts.
 - Neural Duel: a real 12-16-3 network learns four-move patterns during the session. Actual weights and past prediction accuracy are shown; choices are committed before each click.
 - Path Race: race an A* planner through seeded maps, edit obstacles, reveal the route, and adjust opponent animation speed.
-- The original lime, orange, pink and electric-blue identity, with turquoise in the interactive objects and games.
+- The original lime, orange, pink and electric-blue identity, a lime/turquoise AF monogram, and a ruby-red rover with a clear-coated finish.
 - A local product studio with rover, sensor enclosure, and lamp templates. Change width, material finish, and assembly separation.
 - An English/Arabic keyword parser maps supported intent to template parameters. This is deterministic software, not AI inference.
 - Export JSON specifications, a Markdown design brief, and an STL solid concept base in millimeters. The STL does not contain the full assembly and is not manufacturing certified.
@@ -63,7 +63,7 @@ Before fabrication, validate dimensions, material suitability, mounting holes, c
 
 ## Identity and licenses
 
-The crowned-A orbital mark was generated for this project from the owner's supplied reference. See [assets/BRAND.md](assets/BRAND.md) for the prompt and provenance.
+The current AF monogram was generated for this project in electric lime and turquoise. The previous crowned-A mark is retained as an archived asset. See [assets/BRAND.md](assets/BRAND.md) for prompts and provenance.
 
 Project-authored source: [MIT](LICENSE). Vendored dependencies retain their original licenses, including GPL-3.0 for Stockfish. See [all licenses and matching engine build inputs](vendor/THIRD-PARTY.md).
 

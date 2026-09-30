@@ -1,4 +1,4 @@
-export const DEFAULT_DESIGN = Object.freeze({ template: 'rover', width: 180, finish: 'turquoise', explode: 25, wireframe: false });
+export const DEFAULT_DESIGN = Object.freeze({ template: 'rover', width: 180, finish: 'ruby', explode: 25, wireframe: false });
 export const FINISHES = Object.freeze({ ruby: 0xa71930, silver: 0xa5b4b8, mint: 0x5b9e84, turquoise: 0x10a99f, lime: 0xa9d52b });
 
 export function normalizeDesign(value = {}) {

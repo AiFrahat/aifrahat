@@ -35,7 +35,8 @@ export function createProduct(design) {
     const m = new THREE.MeshStandardMaterial({ color, metalness, roughness, ...extra });
     materials.push(m); return m;
   };
-  const body = material(FINISHES[design.finish], .6, .27);
+  const body = new THREE.MeshPhysicalMaterial({ color: FINISHES[design.finish], metalness: .5, roughness: .28, clearcoat: .85, clearcoatRoughness: .18 });
+  materials.push(body);
   const metal = material(0xb4bbc0, .88, .24);
   const dark = material(0x111719, .35, .5);
   const rubber = material(0x171b1d, .05, .8);
@@ -61,8 +62,11 @@ export function createProduct(design) {
     const canvas = document.createElement('canvas'); canvas.width = 512; canvas.height = 128;
     const ctx = canvas.getContext('2d');
     ctx.fillStyle = '#12191b'; ctx.fillRect(0, 0, 512, 128);
-    ctx.fillStyle = '#cedad3'; ctx.font = 'bold 52px monospace'; ctx.fillText('AF / 01', 26, 70);
-    ctx.fillStyle = '#79baa4'; ctx.font = '18px monospace'; ctx.fillText('EXPERIMENTAL SYSTEMS', 28, 104);
+    ctx.font = 'bold 52px monospace';
+    ctx.fillStyle = '#c8ff36'; ctx.fillText('A', 26, 70);
+    ctx.fillStyle = '#19d4ca'; ctx.fillText('F', 58, 70);
+    ctx.fillStyle = '#cedad3'; ctx.fillText(' / 01', 90, 70);
+    ctx.fillStyle = '#9aafaa'; ctx.font = '18px monospace'; ctx.fillText('EXPERIMENTAL SYSTEMS', 28, 104);
     const texture = new THREE.CanvasTexture(canvas); texture.colorSpace = THREE.SRGBColorSpace;
     const mat = new THREE.MeshStandardMaterial({ map: texture, roughness: .5, metalness: .25 }); materials.push(mat);
     const label = mesh(new THREE.PlaneGeometry(.9, .23), mat, parent, 0, y, z); label.rotation.x = -Math.PI / 2;
