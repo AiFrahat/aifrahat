@@ -18,9 +18,14 @@ test('the clear-coated body keeps its finish and updates correctly', () => {
   assert.ok(body);
   assert.equal(body.color.getHex(), FINISHES.ruby);
   assert.equal(body.clearcoat, .85);
-  product.update({ ...DEFAULT_DESIGN, finish: 'turquoise', wireframe: true });
-  assert.equal(body.color.getHex(), FINISHES.turquoise);
-  assert.equal(body.wireframe, true);
+  const geometry = product.root.children[0].children[0].geometry;
+  assert.equal(Object.keys(FINISHES).length, 5);
+  for (const [finish, color] of Object.entries(FINISHES)) {
+    product.update({ ...DEFAULT_DESIGN, finish, wireframe: true });
+    assert.equal(body.color.getHex(), color);
+    assert.equal(body.wireframe, true);
+    assert.equal(product.root.children[0].children[0].geometry, geometry);
+  }
   product.dispose();
 });
 

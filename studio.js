@@ -40,6 +40,11 @@ $('[data-wireframe]').addEventListener('change', e => { design.wireframe = e.tar
 $('[data-build]').addEventListener('click', () => { feedback = parseBrief($('#product-prompt').value, design); design = feedback.design; sync(); });
 $('[data-studio-reset]').addEventListener('click', () => studio.reset());
 $('[data-hero-reset]').addEventListener('click', () => hero.reset());
+$$('[data-hero-finish]').forEach(button => button.addEventListener('click', () => {
+  heroDesign.finish = button.dataset.heroFinish;
+  $$('[data-hero-finish]').forEach(b => b.setAttribute('aria-pressed', String(b === button)));
+  hero.update(heroDesign);
+}));
 $('[data-hero-explode]').addEventListener('input', e => { heroDesign.explode = Number(e.target.value); hero.update(heroDesign); });
 let heroPaused = matchMedia('(prefers-reduced-motion: reduce)').matches;
 function updatePause() {

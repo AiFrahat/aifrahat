@@ -54,9 +54,21 @@ html[dir="ltr"] .hero-object { left: auto; right: -1%; }
 [data-scene] canvas { position: absolute; inset: 0; width: 100%; height: 100%; touch-action: pan-y; outline-offset: -6px; }
 .scene-fallback { position: absolute; object-fit: contain; width: 70%; height: 85%; top: 5%; left: 15%; opacity: .9; }
 .has-webgl .scene-fallback { display: none; }
-.object-caption { position: absolute; left: 6%; bottom: 134px; z-index: 2; display: flex; flex-direction: column; gap: 4px; color: #6d777a; font: 9px/1.6 var(--mono); direction: ltr; pointer-events: none; }
+.object-caption { position: absolute; left: 6%; bottom: 164px; z-index: 2; display: flex; flex-direction: column; gap: 4px; color: #6d777a; font: 9px/1.6 var(--mono); direction: ltr; pointer-events: none; }
 html[dir="ltr"] .object-caption { left: 46%; }
 .object-id { font: 25px/1.5 var(--mono); color: #d5dbd8; }
+.hero-finishes { position: absolute; left: 6%; bottom: 112px; z-index: 3; display: flex; gap: 4px; direction: ltr; }
+html[dir="ltr"] .hero-finishes { left: 46%; }
+.hero-finishes button { display: grid; place-items: center; width: 32px; height: 36px; padding: 0; border: 0; border-radius: 4px; background: transparent; color: #edf2ee; }
+.hero-finishes button span { width: 18px; height: 18px; border-radius: 50%; background: var(--finish); outline: 1px solid transparent; outline-offset: 4px; transition: outline-color .2s; }
+.hero-finishes button:hover span { outline-color: #748883; }
+.hero-finishes button[aria-pressed="true"] span { outline: 2px solid currentColor; }
+[data-hero-finish="ruby"] { --finish: #b52b3d; }
+[data-hero-finish="silver"] { --finish: #a7b8bb; }
+[data-hero-finish="mint"] { --finish: #6aaf95; }
+[data-hero-finish="turquoise"] { --finish: var(--cyan); }
+[data-hero-finish="lime"] { --finish: var(--acid); }
+[data-theme="light"] .hero-finishes button { color: #17382e; }
 .scene-toolbar { position: absolute; left: 42%; bottom: 128px; display: flex; align-items: center; gap: 8px; z-index: 3; direction: ltr; }
 html[dir="ltr"] .scene-toolbar { left: auto; right: 6%; }
 .scene-toolbar .icon-button { background: #121618d9; }
@@ -151,18 +163,23 @@ html[dir="rtl"] .studio-inputs { direction: rtl; }
 @media(min-width:1600px) { .observatory-copy, .observatory-top { width: calc(100% - 120px); max-width: 1550px; } .intro h1 { font-size: 86px; } .intro { width: 43%; } }
 @media(max-width:1150px) { .desktop-nav a { padding-inline: 7px; font-size: 11px; } .intro h1 { font-size: 60px; } .hero-thesis { font-size: 27px; } .intro-actions { gap: 12px; } .intro { width: 45%; } .scene-toolbar { left: 31%; } .frontier-rail { padding-inline: 15px; } .frontier-rail button { padding-inline: 12px; } .frontier-rail b { font-size: 11px; } }
 @media(max-width:1000px) { .site-header { grid-template-columns: 1fr auto; } .desktop-nav { display: none; } .menu-button { display: grid; } .intro h1 { font-size: 54px; } .hero-thesis { font-size: 25px; } .intro-text { font-size: 13px; } .quiet-link { display: none; } .studio-workspace { grid-template-columns: 300px minmax(0,1fr); } .studio-inputs { padding-right: 20px; } .section-header h2 { font-size: 32px; } .frontier-detail { gap: 30px; padding-left: 80px; } }
+@media(min-width:761px) and (max-width:1000px) {
+  .hero-finishes button { width: 28px; }
+}
 @media(max-width:760px) {
   .site-header { height: 64px; padding-inline: 16px; } .brand-name { font-size: 16px; } .brand-emblem { width: 34px; height: 34px; }
   .shell { width: calc(100% - 40px); } .header-actions { gap: 6px; } .command-key { display: none; } .icon-button { min-width: 32px; width: 32px; height: 32px; } .language-switch { display: inline-flex; }
-  .observatory { margin-top: 64px; height: auto; min-height: 0; padding-bottom: 132px; display: flex; flex-direction: column; }
+  .observatory { margin-top: 64px; height: auto; min-height: 0; padding-bottom: 178px; display: flex; flex-direction: column; }
   .observatory-top { padding-top: 20px; order: 0; } .observatory-top .edition:last-child { display: none; }
   .observatory-copy { height: auto; order: 1; padding-top: 20px; pointer-events: auto; } .intro { width: 100%; padding-bottom: 0; }
   .intro h1 { font-size: 48px; margin-bottom: 8px; } .eyeline { margin-bottom: 8px; font-size: 10px; } .hero-thesis { font-size: 23px; margin-bottom: 8px; max-width: none; }
   .intro-text { font-size: 12px; line-height: 1.65; margin-bottom: 16px; max-width: 440px; } .intro-actions { gap: 16px; } .quiet-link { display: inline-flex; } .primary-action { font-size: 12px; padding: 11px 14px; min-height: 43px; gap: 15px; }
   .maker-signature { display: none; }
   .hero-object, html[dir="ltr"] .hero-object { position: relative; order: 2; width: 100%; height: clamp(170px, calc(100svh - 610px), 260px); top: auto; bottom: auto; left: auto; right: auto; margin-top: -5px; }
-  .object-caption, html[dir="ltr"] .object-caption { left: 20px; bottom: 151px; max-width: 45%; font-size: 8px; } .object-id { font-size: 18px; }
-  .scene-toolbar, html[dir="ltr"] .scene-toolbar { right: 20px; left: auto; bottom: 155px; gap: 6px; } .assembly-control { width: 94px; height: 32px; padding: 4px 6px; }
+  .object-caption, html[dir="ltr"] .object-caption { left: 20px; bottom: 197px; max-width: calc(100% - 220px); font-size: 8px; } .object-id { font-size: 18px; }
+  .scene-toolbar, html[dir="ltr"] .scene-toolbar { right: 20px; left: auto; bottom: 201px; gap: 6px; } .assembly-control { width: 94px; height: 32px; padding: 4px 6px; }
+  .hero-finishes, html[dir="ltr"] .hero-finishes { left: 20px; right: 20px; bottom: 140px; justify-content: center; gap: 6px; }
+  .hero-finishes button { width: 36px; }
   .frontier-rail { grid-template-columns: repeat(3,minmax(0,1fr)); padding: 0 8px; } .frontier-rail button { min-height: 65px; padding: 8px 12px; gap: 0 8px; grid-template-rows: 20px auto; } .frontier-rail button:nth-child(3) { border-inline-end: 0; } .frontier-rail button:nth-child(-n+3) { border-bottom: 1px solid #24292b; } .frontier-rail b { font-size: 10px; }
   .section-pad { padding-block: 64px; } .section-header { display: block; margin-bottom: 30px; } .section-header h2 { font-size: 29px; } .section-header > p { margin-top: 20px; max-width: 100%; font-size: 13px; }
   .frontier-list summary { grid-template-columns: 25px 25px 1fr 20px; gap: 12px; padding-block: 20px; } .frontier-list h3 { font-size: 19px; } .frontier-list summary > .lucide { width: 19px; } .frontier-detail { padding: 0 0 22px 37px; display: block; } .frontier-detail p { font-size: 13px; margin-bottom: 16px; }
@@ -184,7 +201,8 @@ html[dir="rtl"] .studio-inputs { direction: rtl; }
   .maker-signature { display: none; }
   .frontier-rail button { min-height: 72px; padding-block: 9px; }
   .hero-object { bottom: 74px; top: 26px; }
-  .object-caption { bottom: 88px; }
+  .object-caption { bottom: 130px; }
+  .hero-finishes { bottom: 80px; }
   .object-id { font-size: 17px; }
   .scene-toolbar { bottom: 89px; }
   .frontiers-section { padding-top: 24px; }
