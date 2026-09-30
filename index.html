@@ -12,6 +12,7 @@
   <link rel="manifest" href="site.webmanifest">
   <link rel="stylesheet" href="styles.css">
   <link rel="stylesheet" href="atelier.css">
+  <link rel="stylesheet" href="arena.css">
   <script type="importmap">{"imports":{"three":"./vendor/three.module.min.js"}}</script>
 
   <meta property="og:type" content="website">
@@ -33,6 +34,7 @@
     </a>
 
     <nav class="desktop-nav" aria-label="Primary navigation">
+      <a class="arena-nav" href="#arena" data-ar="ساحة الذكاء" data-en="AI Arena">ساحة الذكاء</a>
       <a href="#frontiers" data-ar="الاهتمامات" data-en="Frontiers">الاهتمامات</a>
       <a href="#studio" data-ar="استوديو البناء" data-en="Build studio">استوديو البناء</a>
       <a href="#work" data-ar="العمل" data-en="Work">العمل</a>
@@ -58,6 +60,7 @@
     </div>
 
     <nav class="mobile-nav" data-mobile-nav aria-label="Mobile navigation">
+      <a href="#arena" data-ar="ساحة الذكاء" data-en="AI Arena">ساحة الذكاء</a>
       <a href="#frontiers" data-ar="الاهتمامات" data-en="Frontiers">الاهتمامات</a>
       <a href="#studio" data-ar="استوديو البناء" data-en="Build studio">استوديو البناء</a>
       <a href="#work" data-ar="العمل" data-en="Work">العمل</a>
@@ -79,8 +82,8 @@
         <p class="hero-thesis" data-ar="الذكاء يصبح شيئًا تلمسه." data-en="Intelligence. Made tangible.">الذكاء يصبح شيئًا تلمسه.</p>
         <p class="intro-text" data-ar="أستكشف المسافة بين الفكرة والكود والآلة. ستة مجالات، وفضول واحد: ماذا يمكن أن نبني بعد؟" data-en="Exploring the space between an idea, its code, and the machine it becomes. Six frontiers. One question: what can we build next?">أستكشف المسافة بين الفكرة والكود والآلة. ستة مجالات، وفضول واحد: ماذا يمكن أن نبني بعد؟</p>
         <div class="intro-actions">
-          <a class="button primary-action" href="#studio"><span  data-ar="حوّل فكرتك إلى نموذج" data-en="Make an idea tangible">حوّل فكرتك إلى نموذج</span><i data-lucide="arrow-up-left" aria-hidden="true"></i></a>
-          <a class="quiet-link" href="#frontiers"><span  data-ar="مساحات الفضول" data-en="Explore the frontiers">مساحات الفضول</span><i data-lucide="arrow-down" aria-hidden="true"></i></a>
+          <a class="button primary-action" href="#arena"><span data-ar="ادخل ساحة الذكاء" data-en="Enter the AI Arena">ادخل ساحة الذكاء</span><i data-lucide="arrow-up-left" aria-hidden="true"></i></a>
+          <a class="quiet-link" href="#studio"><span data-ar="استوديو البناء" data-en="Build studio">استوديو البناء</span><i data-lucide="box" aria-hidden="true"></i></a>
         </div>
         <div class="maker-signature"><img src="assets/portrait-small.webp" alt="Ahmed Frahat" width="40" height="40"><span>AHMED FRAHAT <small  data-ar="أتعلم. أصمّم. أبني. أشارك." data-en="Learn. Design. Build. Share.">أتعلم. أصمّم. أبني. أشارك.</small></span></div>
       </div></div>
@@ -117,9 +120,28 @@
       </div>
     </section>
 
+    <section class="ai-arena section-pad" id="arena" aria-labelledby="arena-title">
+      <div class="shell">
+        <header class="arena-heading">
+          <div><p class="section-kicker">02 / THE INTELLIGENCE ARCADE</p><h2 id="arena-title" data-ar="ساحة الذكاء." data-en="AI Arena.">ساحة الذكاء.</h2></div>
+          <div class="arena-motto"><p  data-ar="الخطوة القادمة لك." data-en="Your next move.">الخطوة القادمة لك.</p><span>SEARCH / LEARN / PLAN</span></div>
+        </header>
+        <div class="arena-tabs" role="tablist" aria-label="AI games">
+          <button type="button" id="tab-chess" role="tab" aria-selected="true" aria-controls="panel-chess" data-game="chess"><i data-lucide="crown"></i><span><b>01 / CHESS LAB</b><small  data-ar="تحدّي المحرك" data-en="Challenge the engine">تحدّي المحرك</small></span><em>STOCKFISH 19</em></button>
+          <button type="button" id="tab-neural" role="tab" aria-selected="false" aria-controls="panel-neural" tabindex="-1" data-game="neural"><i data-lucide="brain-circuit"></i><span><b>02 / NEURAL DUEL</b><small  data-ar="اكسر النمط" data-en="Break the pattern">اكسر النمط</small></span><em>ONLINE LEARNING</em></button>
+          <button type="button" id="tab-maze" role="tab" aria-selected="false" aria-controls="panel-maze" tabindex="-1" data-game="maze"><i data-lucide="route"></i><span><b>03 / PATH RACE</b><small  data-ar="اسبق الخوارزمية" data-en="Outrun the search">اسبق الخوارزمية</small></span><em>A* SEARCH</em></button>
+        </div>
+        <div id="panel-chess" class="arena-panel" role="tabpanel" aria-labelledby="tab-chess" data-game-panel="chess"></div>
+        <div id="panel-neural" class="arena-panel" role="tabpanel" aria-labelledby="tab-neural" data-game-panel="neural" hidden></div>
+        <div id="panel-maze" class="arena-panel" role="tabpanel" aria-labelledby="tab-maze" data-game-panel="maze" hidden></div>
+        <noscript><p lang="ar">تحتاج الألعاب إلى JavaScript. بقية الموقع والروابط متاحة.</p></noscript>
+        <div class="arena-footnote"><span>LOCAL COMPUTE / OPEN SOURCE</span><a href="vendor/THIRD-PARTY.md" target="_blank" rel="noopener"><span  data-ar="المحركات والمصدر والتراخيص" data-en="Engines, source & licenses">المحركات والمصدر والتراخيص</span> ↗</a></div>
+      </div>
+    </section>
+
     <section class="product-studio section-pad" id="studio" aria-labelledby="studio-title">
       <div class="shell">
-        <header class="section-header"><div><p class="section-kicker">02 / PROMPT → FORM</p><h2 id="studio-title" data-ar="الفكرة لك. البداية هنا." data-en="Your idea. Its first form.">الفكرة لك. البداية هنا.</h2></div><p  data-ar="تجربة بارامترية محلية بثلاثة قوالب. نماذج تصورية قابلة للتصدير، وليست استدلالًا بنموذج ذكاء اصطناعي أو تصميمات معتمدة للتصنيع." data-en="A local parametric experiment with three templates. Exportable concept models, not AI inference or manufacturing-certified designs.">تجربة بارامترية محلية بثلاثة قوالب. نماذج تصورية قابلة للتصدير، وليست استدلالًا بنموذج ذكاء اصطناعي أو تصميمات معتمدة للتصنيع.</p></header>
+        <header class="section-header"><div><p class="section-kicker">03 / PROMPT → FORM</p><h2 id="studio-title" data-ar="الفكرة لك. البداية هنا." data-en="Your idea. Its first form.">الفكرة لك. البداية هنا.</h2></div><p  data-ar="تجربة بارامترية محلية بثلاثة قوالب. نماذج تصورية قابلة للتصدير، وليست استدلالًا بنموذج ذكاء اصطناعي أو تصميمات معتمدة للتصنيع." data-en="A local parametric experiment with three templates. Exportable concept models, not AI inference or manufacturing-certified designs.">تجربة بارامترية محلية بثلاثة قوالب. نماذج تصورية قابلة للتصدير، وليست استدلالًا بنموذج ذكاء اصطناعي أو تصميمات معتمدة للتصنيع.</p></header>
         <div class="studio-workspace">
           <div class="studio-inputs">
             <label class="field-label" for="product-prompt" data-ar="وصف الفكرة" data-en="THE BRIEF">وصف الفكرة</label>
@@ -137,6 +159,8 @@
                 <button type="button" data-finish="ruby" aria-pressed="true" aria-label="Ruby finish" title="Ruby ceramic"></button>
                 <button type="button" data-finish="silver" aria-pressed="false" aria-label="Silver finish" title="Brushed titanium"></button>
                 <button type="button" data-finish="mint" aria-pressed="false" aria-label="Mint finish" title="Mineral green"></button>
+                <button type="button" data-finish="turquoise" aria-pressed="false" aria-label="Turquoise finish" title="Turquoise ceramic"></button>
+                <button type="button" data-finish="lime" aria-pressed="false" aria-label="Lime finish" title="Electric lime"></button>
               </div></div>
               <label class="dimension-label"><span  data-ar="تفكيك الطبقات" data-en="Exploded view">تفكيك الطبقات</span><output data-explode-output>25%</output><input type="range" min="0" max="100" value="25" data-explode aria-label="Assembly separation"></label>
               <label class="wire-toggle"><input type="checkbox" data-wireframe><span  data-ar="البنية الشبكية" data-en="Wireframe">البنية الشبكية</span></label>
@@ -163,7 +187,7 @@
       <div class="shell">
         <header class="section-header reveal">
           <div>
-            <p class="section-kicker">03 / SELECTED WORK</p>
+            <p class="section-kicker">04 / SELECTED WORK</p>
             <h2 data-ar="أنظمة تعمل، لا عروض فارغة." data-en="Systems that work, not empty demos.">أنظمة تعمل، لا عروض فارغة.</h2>
           </div>
           <p data-ar="كل مشروع هنا قابل للفحص والتجربة. الكود، القرارات، والقيود جزء من القصة." data-en="Every project here can be inspected and tested. Code, decisions, and limitations are part of the story.">كل مشروع هنا قابل للفحص والتجربة. الكود، القرارات، والقيود جزء من القصة.</p>
@@ -241,7 +265,7 @@
       <div class="shell">
         <header class="section-header section-header-light reveal">
           <div>
-            <p class="section-kicker">04 / LIVE LAB</p>
+            <p class="section-kicker">05 / LIVE LAB</p>
             <h2 data-ar="غيّر الفرضية. شاهد النظام يتغيّر." data-en="Change the hypothesis. Watch the system change.">غيّر الفرضية. شاهد النظام يتغيّر.</h2>
           </div>
           <p data-ar="هذه محاكاة تعليمية داخل المتصفح وليست نتائج benchmark منشورة." data-en="This is an educational browser simulation, not a published benchmark.">هذه محاكاة تعليمية داخل المتصفح وليست نتائج benchmark منشورة.</p>
@@ -320,7 +344,7 @@
       <div class="shell">
         <header class="section-header reveal">
           <div>
-            <p class="section-kicker">05 / METHOD</p>
+            <p class="section-kicker">06 / METHOD</p>
             <h2 data-ar="البحث الجيد يترك أثرًا يمكن تتبّعه." data-en="Good research leaves a trace you can follow.">البحث الجيد يترك أثرًا يمكن تتبّعه.</h2>
           </div>
           <p data-ar="أتعامل مع كل فكرة كمنظومة: سؤال واضح، تجربة قابلة لإعادة التشغيل، وحدود معلنة." data-en="I treat each idea as a system: a clear question, a reproducible experiment, and explicit limitations.">أتعامل مع كل فكرة كمنظومة: سؤال واضح، تجربة قابلة لإعادة التشغيل، وحدود معلنة.</p>
@@ -373,7 +397,7 @@
     <section class="about-section" id="about">
       <div class="about-grid shell">
         <div class="about-statement reveal">
-          <p class="section-kicker">06 / ABOUT</p>
+          <p class="section-kicker">07 / ABOUT</p>
           <h2 data-ar="أؤمن أن التقنية تصبح أقوى عندما تصبح مفهومة." data-en="I believe technology gets stronger when it becomes understandable.">أؤمن أن التقنية تصبح أقوى عندما تصبح مفهومة.</h2>
         </div>
         <div class="about-copy reveal" data-delay="1">
@@ -406,6 +430,7 @@
       <button type="button" class="icon-button" data-close-command aria-label="Close command palette" title="Close"><i data-lucide="x"></i></button>
     </div>
     <div class="command-list" data-command-list>
+      <button type="button" data-command-target="#arena"><span data-ar="ادخل ساحة الذكاء" data-en="Enter the AI Arena">ادخل ساحة الذكاء</span><em>AI</em></button>
       <button type="button" data-command-target="#studio"><span data-ar="افتح استوديو البناء" data-en="Open build studio">افتح استوديو البناء</span><em>3D</em></button>
       <button type="button" data-command-target="#frontiers"><span data-ar="استكشف الاهتمامات" data-en="Explore research frontiers">استكشف الاهتمامات</span><em>06</em></button>
       <button type="button" data-command-target="#work"><span data-ar="اذهب إلى الأعمال" data-en="Go to selected work">اذهب إلى الأعمال</span><em>01</em></button>
@@ -420,5 +445,6 @@
   <script src="vendor/lucide.min.js" defer></script>
   <script src="script.js" defer></script>
   <script type="module" src="studio.js"></script>
+  <script type="module" src="games/arena.js"></script>
 </body>
 </html>

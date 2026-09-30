@@ -6,6 +6,10 @@ An open-source, bilingual portfolio for Ahmed Frahat. Live at [aifrahat.com](htt
 
 - A procedural Three.js rover with orbit controls, exploded layers, wireframe views, and keyboard rotation.
 - Six research frontiers: Physical AI, Vibe Coding, Vibe Hardware, Vibe Fabrication, Prompt-to-Product, and Agentic Engineering.
+- AI Arena: local Stockfish 19 Lite chess with legal moves, promotion, hints, undo, board flip, PGN export and live search metrics. The engine downloads only when a match starts.
+- Neural Duel: a real 12-16-3 network learns four-move patterns during the session. Actual weights and past prediction accuracy are shown; choices are committed before each click.
+- Path Race: race an A* planner through seeded maps, edit obstacles, reveal the route, and adjust opponent animation speed.
+- The original lime, orange, pink and electric-blue identity, with turquoise in the interactive objects and games.
 - A local product studio with rover, sensor enclosure, and lamp templates. Change width, material finish, and assembly separation.
 - An English/Arabic keyword parser maps supported intent to template parameters. This is deterministic software, not AI inference.
 - Export JSON specifications, a Markdown design brief, and an STL solid concept base in millimeters. The STL does not contain the full assembly and is not manufacturing certified.
@@ -30,7 +34,7 @@ Node 20.6 or later, no install step:
 npm test
 ```
 
-Tests cover bilingual parsing, parameter bounds, unsupported requests, specification disclosures, and all three STL bases at minimum/default/maximum widths. Mesh tests verify exact bounds and a closed two-manifold surface after welding triangle vertices.
+Tests cover bilingual parsing, parameter bounds, STL geometry, chess rules and UCI parsing, committed neural predictions and learning, and reproducible reachable A* maps. Mesh tests verify exact bounds and a closed two-manifold surface after welding triangle vertices.
 
 ## Source map
 
@@ -38,18 +42,20 @@ Tests cover bilingual parsing, parameter bounds, unsupported requests, specifica
 | --- | --- |
 | `index.html` | Semantic content, bilingual strings, import map |
 | `atelier.css` | Identity, 3D studio, responsive layouts |
+| `arena.css` | Original palette, responsive game surfaces |
+| `games/` | Lazy-loaded chess, neural duel and path race |
 | `styles.css` | Existing research lab and portfolio components |
 | `design-state.mjs` | Pure parser, normalized state, export specifications |
 | `product-model.js` | Procedural geometry and STL base |
 | `product-scene.js` | Three.js renderer, lighting, controls, lifecycle |
 | `studio.js` | Interface state, presets, downloads |
 | `script.js` | Language, navigation, dictionary, illustrative lab |
-| `vendor/` | Pinned Three.js 0.180.0 and Lucide 0.468.0 |
+| `vendor/` | Pinned dependencies, licenses, Stockfish source and network |
 | `tests/` | Node tests and vendored-module resolver |
 
 ## Privacy and limits
 
-All prompts and design parameters stay in the browser. No telemetry, API keys, backend, or inference requests. Language, appearance, and the current template parameters use localStorage; the written prompt is not persisted. Third-party dependencies are vendored, so runtime does not depend on a CDN.
+All prompts, moves and design parameters stay in the browser. No telemetry, API keys, backend, or remote inference requests. Language, appearance, and the current template parameters use localStorage; written prompts and game sessions are not persisted. Third-party dependencies are vendored, so runtime does not depend on a CDN. The neural game performs real local inference and training; chess uses local WASM search. Neither is a general-purpose LLM or a claim to the world's strongest model.
 
 The rover, sensor, and lamp are concept studies, not claims of built physical products. TraceLens is a concept study. RAG scores and the agent timeline are explicitly illustrative, not measured research findings or a live agent run.
 
@@ -59,4 +65,6 @@ Before fabrication, validate dimensions, material suitability, mounting holes, c
 
 The crowned-A orbital mark was generated for this project from the owner's supplied reference. See [assets/BRAND.md](assets/BRAND.md) for the prompt and provenance.
 
-Project source: [MIT](LICENSE). Vendored dependencies retain their original [Three.js](vendor/THREE-LICENSE) and [Lucide](vendor/LUCIDE-LICENSE) license notices.
+Project-authored source: [MIT](LICENSE). Vendored dependencies retain their original licenses, including GPL-3.0 for Stockfish. See [all licenses and matching engine build inputs](vendor/THIRD-PARTY.md).
+
+The pre-arena release is preserved in a local, git-ignored `backups/` ZIP with a checksum and restoration instructions. Backups are not deployed.

@@ -54,11 +54,11 @@ export function mountScene(container, initial, { hero = false } = {}) {
   key.shadow.camera.left = -5; key.shadow.camera.right = 5;
   key.shadow.camera.top = 7; key.shadow.camera.bottom = -4;
   key.shadow.normalBias = .035; scene.add(key);
-  const rim = new THREE.DirectionalLight(0x9fdcdb, 3);
+  const rim = new THREE.DirectionalLight(0x42e8d8, 3);
   rim.position.set(-4, 3, -4); scene.add(rim);
   const ground = new THREE.Mesh(new THREE.PlaneGeometry(24, 24), new THREE.ShadowMaterial({ opacity: .32 }));
   ground.rotation.x = -Math.PI / 2; ground.position.y = .015; ground.receiveShadow = true; scene.add(ground);
-  const grid = new THREE.GridHelper(12, 24, 0x344a44, 0x283632);
+  const grid = new THREE.GridHelper(12, 24, 0x27aaa3, 0x245159);
   grid.material.transparent = true; grid.material.opacity = hero ? .2 : .28; scene.add(grid);
   let model = createProduct(state); scene.add(model.root);
   function reset() {
