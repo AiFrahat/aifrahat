@@ -1,0 +1,17 @@
+{
+  "name": "AiFRAHAT — AI Research & Open Source",
+  "short_name": "AiFRAHAT",
+  "description": "Open AI research, interactive experiments, and tools by Ahmed Frahat.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#0a0c0f",
+  "theme_color": "#0a0c0f",
+  "icons": [
+    {
+      "src": "favicon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any"
+    }
+  ]
+}
