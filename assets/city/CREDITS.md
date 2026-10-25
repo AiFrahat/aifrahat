@@ -1,5 +1,14 @@
 # City artwork provenance
 
+2026-10-25 visual integration: reconstruction/neon-identity.ts adds six original
+AF kinetic signs with counter-rotating luminous rings and animated light bars.
+Kinetic facade canvases now sample the same original campaign atlas. District
+project screens share Works posters and play the nearest concept film silently
+(one active city video at a time), respecting visibility and reduced motion.
+Concept films for ATHR, MERATH, ASL and WASL now use animated camera crops of the
+same atlas quadrants with project-specific procedural story diagrams and captions.
+This is an authored visual adaptation, not a verified pixel-identical replica.
+
 `reconstruction/district.ts` adds original primitive architecture, project
 terminals, orbital AF marks, cables and scenic lanterns. Its campaign panels
 reuse the original generated concept atlas below for ATHR, MERATH, ASL and
