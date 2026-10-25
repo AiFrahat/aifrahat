@@ -1,0 +1,42 @@
+{
+  "imhotip": {
+    "poster": "/assets/projects/imhotip-poster.jpg",
+    "video": "/assets/projects/imhotip-tour.webm",
+    "credit": "Owner-supplied website walkthrough, 2026-10-24"
+  },
+  "car": {
+    "poster": "/assets/projects/car-world-showcase.jpg",
+    "video": "/assets/projects/car-world-showcase.mp4",
+    "credit": "Ai FRAHAT showcase edit using local preview renders. Adapted from Bruno Simon's MIT-licensed Folio project; attribution retained."
+  },
+  "aifrahat": {
+    "poster": "/assets/projects/aifrahat-poster.jpg",
+    "video": "/assets/projects/aifrahat-tour.webm",
+    "credit": "Owner-supplied website walkthrough, 2026-10-24"
+  },
+  "athr": {
+    "video": "/assets/projects/athr-concept.mp4",
+    "credit": "Original procedural motion design for Ai FRAHAT. Concept visualization, not product footage.",
+    "poster": "/assets/projects/athr-concept.jpg"
+  },
+  "merath": {
+    "video": "/assets/projects/merath-concept.mp4",
+    "credit": "Original procedural motion design for Ai FRAHAT. Concept visualization, not product footage.",
+    "poster": "/assets/projects/merath-concept.jpg"
+  },
+  "asl": {
+    "video": "/assets/projects/asl-concept.mp4",
+    "credit": "Original procedural motion design for Ai FRAHAT. Concept visualization, not product footage.",
+    "poster": "/assets/projects/asl-concept.jpg"
+  },
+  "wasl": {
+    "video": "/assets/projects/wasl-concept.mp4",
+    "credit": "Original procedural motion design for Ai FRAHAT. Concept visualization, not product footage.",
+    "poster": "/assets/projects/wasl-concept.jpg"
+  },
+  "aslhu": {
+    "video": "/assets/projects/aslhu-concept.mp4",
+    "credit": "Original procedural motion design for Ai FRAHAT. Concept visualization, not product footage.",
+    "poster": "/assets/projects/aslhu-concept.jpg"
+  }
+}
