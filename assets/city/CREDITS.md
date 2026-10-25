@@ -1,5 +1,14 @@
 # City artwork provenance
 
+2026-10-25 architecture audit: the supplied source GLB contains 12 texture atlases
+and zero glTF animations. The former export stripped all 12. Four structural
+window/panel atlases (source materials Material_0, Material_0.001, Material_0.002,
+Mat.1) were visually inspected and retained in the current derived GLB. Source
+advertising/portfolio/logo atlases remain excluded. These four maps are reference-
+derived, not original Ai FRAHAT artwork, and their redistribution rights remain
+unverified, like the derived geometry. Older all-textures-stripped notes below
+describe the preceding export and are superseded by this audit.
+
 2026-10-25 visual integration: reconstruction/neon-identity.ts adds six original
 AF kinetic signs with counter-rotating luminous rings and animated light bars.
 Kinetic facade canvases now sample the same original campaign atlas. District
