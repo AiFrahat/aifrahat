@@ -1,5 +1,13 @@
 # City artwork provenance
 
+Architectural coverage completion, 2026-10-25: four original structural atlas
+bindings are retained. Six other structural primitive bindings now use original
+UV-aligned metal/service-panel artwork with seams, fasteners, vents, conduits,
+status lights and AF text. Their bump and emissive maps are authored procedurally;
+they are not recovered source normal maps. Decorative/ad surfaces continue to
+use owner campaign artwork. Runtime detailing uses 512px maps on coarse pointers
+and 1024px otherwise. No source logo or portfolio atlas was added by this step.
+
 2026-10-25 architecture audit: the supplied source GLB contains 12 texture atlases
 and zero glTF animations. The former export stripped all 12. Four structural
 window/panel atlases (source materials Material_0, Material_0.001, Material_0.002,
