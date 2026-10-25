@@ -1,5 +1,13 @@
 # City artwork provenance
 
+2026-10-25 roof/motion pass: radio masts, crossbars, aerial arrays, warning lights
+and four turning dishes are original procedural reconstructions placed on the
+ten recorded block roofs. They are not extracted named antenna assets; the
+archive model exposes no separately named antenna/radar node. The archived
+material setup flags parts containing "rotate" for a Y-axis shader rotation.
+Elevated owner-logo panels now turn around that axis rather than merely tilting.
+No source logo pixels were imported for this change.
+
 Architectural coverage completion, 2026-10-25: four original structural atlas
 bindings are retained. Six other structural primitive bindings now use original
 UV-aligned metal/service-panel artwork with seams, fasteners, vents, conduits,
