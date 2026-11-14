@@ -1,0 +1,8 @@
+/* Isolated navigation between the two experiences; original classic styles are unchanged. */
+.universe-return-area { display: flex; justify-content: center; padding: 24px 16px; }
+.universe-return { display: inline-flex; align-items: center; justify-content: center; box-sizing: border-box; min-height: 44px; max-width: 100%; padding: 11px 20px; border: 1px solid #c9a75a; border-radius: 6px; background: #111111; color: #f2d18a; font: inherit; font-weight: 700; text-align: center; text-decoration: none; overflow-wrap: anywhere; }
+.universe-return:hover { background: #242014; color: #ffe9bb; }
+.universe-return:focus-visible { outline: 3px solid #c9a75a; outline-offset: 4px; }
+.universe-return-en { display: none; }
+html[lang="en"] .universe-return-en { display: inline; }
+html[lang="en"] .universe-return-ar { display: none; }

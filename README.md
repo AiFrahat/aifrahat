@@ -1,4 +1,42 @@
-# AiFRAHAT / Experimental Atelier
+# AiFRAHAT / Dual Experience
+
+The current entry point is the cinematic **Universe** at `/`. The original
+classic portfolio is available at `/classic/`, with dark, gold-bordered links
+after ABOUT and beside ENTER THE UNIVERSE. Every classic page includes a
+bilingual return link to `/`.
+
+This integration starts from GitHub `main` commit
+`68f46e6f85e97da3f75927b8767817b3d9545dee`. The classic files come from the actual
+`AiFRAHAT-RELEASE.zip`, not a recreation. Its original styles, scripts, media and
+project pages are retained; only the return-link integration is added.
+
+## Current runtime and validation
+
+The checked-in site is a static artifact. No build command or installation is
+required to serve it, and the cinematic bundler source is not present. Serve
+the repository root, for example `python -m http.server 8765 --bind 127.0.0.1`.
+Open `http://127.0.0.1:8765/` and `http://127.0.0.1:8765/classic/`. Use HTTP rather
+than opening HTML files directly. The cinematic site requires a domain-root
+deployment because its existing asset paths start with `/`.
+
+Run `npm test` for the existing Node tests. Browser and static integration
+validation are documented in `DUAL-EXPERIENCE.md`; the older atelier tests alone
+do not validate the cinematic site. Original cinematic bundles and media are
+preserved unchanged. The integration stylesheet is `assets/dual-experience.css`.
+
+## Hosting boundary
+
+Observed hosting is GitHub Pages on `main`, with `CNAME` set to `aifrahat.com`.
+The Dual Experience work is prepared on a separate branch. It must not be
+merged into `main` or deployed until the owner explicitly authorizes production
+publication. No DNS, CNAME, Pages setting, or deployment workflow is changed.
+
+## Legacy atelier files retained in the repository
+
+The notes below describe the earlier atelier implementation, which remains in
+the repository. They are not a description of the current cinematic homepage.
+
+### AiFRAHAT / Experimental Atelier
 
 An open-source, bilingual portfolio for Ahmed Frahat. Live at [aifrahat.com](https://aifrahat.com).
 

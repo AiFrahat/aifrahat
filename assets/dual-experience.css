@@ -1,0 +1,33 @@
+/* Only the two Classic links and their immediate layout are extended here. */
+.classic-link {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  background: #10100e;
+  border: 1px solid #f2c67c;
+  border-radius: 8px;
+  color: #f2c67c;
+  font: 700 12px/1.5 Arial, sans-serif;
+  text-decoration: none;
+  white-space: nowrap;
+  touch-action: manipulation;
+}
+.classic-link:hover { background: #241d13; color: #ffe3ab; }
+.classic-link:focus-visible { outline: 3px solid #fff; outline-offset: 4px; }
+#classic-nav { min-height: 35px; padding: 7px 15px; font-size: 11px; }
+.experience-actions { display: flex; align-items: flex-end; flex-wrap: wrap; gap: 0 14px; }
+#classic-hero { min-height: 66px; margin-top: 20px; padding: 18px 22px; letter-spacing: 1px; }
+html[lang="ar"] .experience-actions { justify-content: flex-end; direction: rtl; }
+@media (width <= 750px) {
+  header nav { gap: 6px; max-width: 460px; }
+  #classic-nav { padding: 7px 9px; font-size: 10px; }
+}
+@media (width <= 450px) {
+  header nav button { font-size: 11px; }
+  #classic-nav { padding-inline: 7px; }
+  .experience-actions { flex-direction: column; align-items: stretch; }
+  #classic-hero { margin-top: 12px; }
+  #entry .experience-actions #enter { width: 100%; }
+}
+@media (pointer: coarse) { #classic-nav { min-height: 48px; } }

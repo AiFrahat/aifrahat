@@ -22,12 +22,14 @@ test('the installed-app manifest uses both AF icon sizes', () => {
   }
 });
 
-test('page identity and fallback assets no longer use the archived crown', () => {
+test('the active Universe page references a valid local favicon', () => {
   const html = read('index.html').toString('utf8');
-  for (const path of ['af-icon-32.png', 'af-icon-64.png', 'af-icon-180.png', 'af-icon-192.png', 'af-monogram.webp', 'af-monogram.png']) {
-    assert.ok(html.includes(`assets/${path}`), `page references ${path}`);
-    assert.ok(read(`assets/${path}`).length > 0);
-  }
+  // The active cinematic page uses favicon.ico; its preserved bytes are PNG.
+  const iconPath = html.match(/<link\b[^>]*rel="icon"[^>]*href="([^"]+)"/i)?.[1];
+  assert.equal(iconPath, '/favicon.ico');
+  const icon = read(iconPath.slice(1));
+  assert.deepEqual([...icon.subarray(0, 8)], [137, 80, 78, 71, 13, 10, 26, 10]);
+  assert.ok(icon.readUInt32BE(16) > 0 && icon.readUInt32BE(20) > 0, 'nonempty PNG dimensions');
   assert.ok(!html.includes('assets/crown-orbit'));
   assert.ok(!html.includes('assets/icon-'));
 });
